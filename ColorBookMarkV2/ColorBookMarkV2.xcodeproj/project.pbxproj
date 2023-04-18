@@ -10,14 +10,12 @@
 		A4172CD629EEE88700F328DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CD529EEE88700F328DD /* RxCocoa */; };
 		A4172CD829EEE88700F328DD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CD729EEE88700F328DD /* RxRelay */; };
 		A4172CDA29EEE88700F328DD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CD929EEE88700F328DD /* RxSwift */; };
-		A4172CDC29EEE88700F328DD /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CDB29EEE88700F328DD /* RxTest */; };
 		A4172CDF29EEE89F00F328DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CDE29EEE89F00F328DD /* Moya */; };
 		A4172CE129EEE89F00F328DD /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE029EEE89F00F328DD /* RxMoya */; };
 		A4172CE429EEE8B100F328DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE329EEE8B100F328DD /* SnapKit */; };
 		A4172CE629EEE8F900F328DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE529EEE8F900F328DD /* RxCocoa */; };
 		A4172CE829EEE8F900F328DD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE729EEE8F900F328DD /* RxRelay */; };
 		A4172CEA29EEE8F900F328DD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE929EEE8F900F328DD /* RxSwift */; };
-		A4172CEC29EEE8F900F328DD /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CEB29EEE8F900F328DD /* RxTest */; };
 		A4172CEE29EEE8F900F328DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CED29EEE8F900F328DD /* Moya */; };
 		A4172CF029EEE8F900F328DD /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CEF29EEE8F900F328DD /* RxMoya */; };
 		A4172CF229EEE8F900F328DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CF129EEE8F900F328DD /* SnapKit */; };
@@ -56,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4172CF329EEEA7500F328DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +69,7 @@
 		A4CC5FC629EB8FE400C0C9F6 /* ColorBookMarkV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITests.swift; sourceTree = "<group>"; };
 		A4CC5FC829EB8FE400C0C9F6 /* ColorBookMarkV2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4CC5FE329EB8FF800C0C9F6 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-debug.plist"; path = "/Users/sun/Desktop/ColorBookMarkV2/ColorBookMarkV2/Info-debug.plist"; sourceTree = "<absolute>"; };
+		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-debug.plist"; path = "/Users/sun/Desktop/ColorBookMarkV2-iOS/ColorBookMarkV2/ColorBookMarkV2/Info-debug.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4172CE129EEE89F00F328DD /* RxMoya in Frameworks */,
-				A4172CDC29EEE88700F328DD /* RxTest in Frameworks */,
 				A4172CDA29EEE88700F328DD /* RxSwift in Frameworks */,
 				A4172CE429EEE8B100F328DD /* SnapKit in Frameworks */,
 				A4172CD829EEE88700F328DD /* RxRelay in Frameworks */,
@@ -107,7 +105,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4172CF029EEE8F900F328DD /* RxMoya in Frameworks */,
-				A4172CEC29EEE8F900F328DD /* RxTest in Frameworks */,
 				A4172CEA29EEE8F900F328DD /* RxSwift in Frameworks */,
 				A4172CF229EEE8F900F328DD /* SnapKit in Frameworks */,
 				A4172CE829EEE8F900F328DD /* RxRelay in Frameworks */,
@@ -177,6 +174,7 @@
 		A4CC5FEE29EB928400C0C9F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4172CF329EEEA7500F328DD /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +222,6 @@
 				A4172CD529EEE88700F328DD /* RxCocoa */,
 				A4172CD729EEE88700F328DD /* RxRelay */,
 				A4172CD929EEE88700F328DD /* RxSwift */,
-				A4172CDB29EEE88700F328DD /* RxTest */,
 				A4172CDE29EEE89F00F328DD /* Moya */,
 				A4172CE029EEE89F00F328DD /* RxMoya */,
 				A4172CE329EEE8B100F328DD /* SnapKit */,
@@ -286,7 +283,6 @@
 				A4172CE529EEE8F900F328DD /* RxCocoa */,
 				A4172CE729EEE8F900F328DD /* RxRelay */,
 				A4172CE929EEE8F900F328DD /* RxSwift */,
-				A4172CEB29EEE8F900F328DD /* RxTest */,
 				A4172CED29EEE8F900F328DD /* Moya */,
 				A4172CEF29EEE8F900F328DD /* RxMoya */,
 				A4172CF129EEE8F900F328DD /* SnapKit */,
@@ -837,11 +833,6 @@
 			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		A4172CDB29EEE88700F328DD /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
 		A4172CDE29EEE89F00F328DD /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */;
@@ -871,11 +862,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		A4172CEB29EEE8F900F328DD /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		A4172CED29EEE8F900F328DD /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
