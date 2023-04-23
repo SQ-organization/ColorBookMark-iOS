@@ -19,6 +19,8 @@
 		A4172CEE29EEE8F900F328DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CED29EEE8F900F328DD /* Moya */; };
 		A4172CF029EEE8F900F328DD /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CEF29EEE8F900F328DD /* RxMoya */; };
 		A4172CF229EEE8F900F328DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CF129EEE8F900F328DD /* SnapKit */; };
+		A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6029F4C2F5007DFCEF /* StringConstant.swift */; };
+		A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6029F4C2F5007DFCEF /* StringConstant.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -55,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		A4172CF329EEEA7500F328DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A436DF6029F4C2F5007DFCEF /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 		A4CC601729EEE7B700C0C9F6 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				A436DF6029F4C2F5007DFCEF /* StringConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -380,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */,
@@ -408,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A4CC5FD929EB8FF800C0C9F6 /* AppDelegate.swift in Sources */,
