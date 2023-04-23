@@ -75,7 +75,7 @@
 		A4CC5FC629EB8FE400C0C9F6 /* ColorBookMarkV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITests.swift; sourceTree = "<group>"; };
 		A4CC5FC829EB8FE400C0C9F6 /* ColorBookMarkV2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4CC5FE329EB8FF800C0C9F6 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-debug.plist"; path = "/Users/sun/Desktop/ColorBookMarkV2-iOS/ColorBookMarkV2/ColorBookMarkV2/Resourse/Info-debug.plist"; sourceTree = "<absolute>"; };
+		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
