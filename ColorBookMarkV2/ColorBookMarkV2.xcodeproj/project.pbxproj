@@ -75,7 +75,7 @@
 		A4CC5FC629EB8FE400C0C9F6 /* ColorBookMarkV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITests.swift; sourceTree = "<group>"; };
 		A4CC5FC829EB8FE400C0C9F6 /* ColorBookMarkV2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4CC5FE329EB8FF800C0C9F6 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-debug.plist"; path = "/Users/sun/Desktop/ColorBookMarkV2-iOS/ColorBookMarkV2/ColorBookMarkV2/Info-debug.plist"; sourceTree = "<absolute>"; };
+		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-debug.plist"; path = "/Users/sun/Desktop/ColorBookMarkV2-iOS/ColorBookMarkV2/ColorBookMarkV2/Resourse/Info-debug.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A436DF6629F4CD9A007DFCEF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF6D29F4CF98007DFCEF /* Repositories */,
+				A436DF6C29F4CF7E007DFCEF /* UseCases */,
+				A436DF6B29F4CF59007DFCEF /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A436DF6729F4CDBA007DFCEF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A436DF6829F4CDCB007DFCEF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF6A29F4CEF5007DFCEF /* SignInScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A436DF6929F4CDDB007DFCEF /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				A4CC5FAE29EB8FE300C0C9F6 /* Assets.xcassets */,
+				A4CC5FB329EB8FE300C0C9F6 /* Info.plist */,
+				A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		A436DF6A29F4CEF5007DFCEF /* SignInScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignInScene;
+			sourceTree = "<group>";
+		};
+		A436DF6B29F4CF59007DFCEF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A436DF6C29F4CF7E007DFCEF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A436DF6D29F4CF98007DFCEF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		A4CC5F9629EB8FE200C0C9F6 = {
 			isa = PBXGroup;
 			children = (
@@ -150,11 +213,12 @@
 		A4CC5FA129EB8FE200C0C9F6 /* ColorBookMarkV2 */ = {
 			isa = PBXGroup;
 			children = (
+				A436DF6929F4CDDB007DFCEF /* Resourse */,
+				A436DF6829F4CDCB007DFCEF /* Presentation */,
+				A436DF6729F4CDBA007DFCEF /* Data */,
+				A436DF6629F4CD9A007DFCEF /* Domain */,
 				A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */,
-				A4CC5FAE29EB8FE300C0C9F6 /* Assets.xcassets */,
 				A4CC5FB029EB8FE300C0C9F6 /* LaunchScreen.storyboard */,
-				A4CC5FB329EB8FE300C0C9F6 /* Info.plist */,
-				A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */,
 				A4CC5FAB29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld */,
 			);
 			path = ColorBookMarkV2;
@@ -577,7 +641,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZY7J8GW45P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorBookMarkV2/Info.plist;
+				INFOPLIST_FILE = ColorBookMarkV2/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -604,7 +668,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZY7J8GW45P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorBookMarkV2/Info.plist;
+				INFOPLIST_FILE = ColorBookMarkV2/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -707,7 +771,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZY7J8GW45P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ColorBookMarkV2/Info-debug.plist";
+				INFOPLIST_FILE = "ColorBookMarkV2/Resourse/Info-debug.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -734,7 +798,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZY7J8GW45P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ColorBookMarkV2/Info-debug.plist";
+				INFOPLIST_FILE = "ColorBookMarkV2/Resourse/Info-debug.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
