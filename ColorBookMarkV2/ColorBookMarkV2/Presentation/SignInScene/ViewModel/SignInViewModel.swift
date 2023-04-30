@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 
 final class SignInViewModel {
+    private let disposeBag = DisposeBag()
     
     struct Input {
         var kakaoSignInButtonTapped: Observable<Void>
@@ -22,5 +23,16 @@ final class SignInViewModel {
     
     struct Output {
         
+    }
+    
+    func transform(from input: Input, disposeBag: DisposeBag) -> Output {
+        let output = Output()
+        
+        input.kakaoSignInButtonTapped.subscribe(onNext: { _ in
+            
+        })
+        .disposed(by: disposeBag)
+        
+        return output
     }
 }
