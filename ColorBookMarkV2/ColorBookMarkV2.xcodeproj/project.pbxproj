@@ -23,6 +23,14 @@
 		A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6029F4C2F5007DFCEF /* StringConstant.swift */; };
 		A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6329F4C39D007DFCEF /* DateExtension.swift */; };
 		A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6329F4C39D007DFCEF /* DateExtension.swift */; };
+		A436DF6F29F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */; };
+		A436DF7029F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */; };
+		A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */; };
+		A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */; };
+		A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7629F4E81D007DFCEF /* SignInViewController.swift */; };
+		A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7629F4E81D007DFCEF /* SignInViewController.swift */; };
+		A436DF7A29F508D4007DFCEF /* SignInUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7929F508D4007DFCEF /* SignInUseCases.swift */; };
+		A436DF7B29F508D4007DFCEF /* SignInUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7929F508D4007DFCEF /* SignInUseCases.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -61,6 +69,10 @@
 		A4172CF329EEEA7500F328DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A436DF6029F4C2F5007DFCEF /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
 		A436DF6329F4C39D007DFCEF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
+		A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		A436DF7629F4E81D007DFCEF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A436DF7929F508D4007DFCEF /* SignInUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCases.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +172,8 @@
 		A436DF6A29F4CEF5007DFCEF /* SignInScene */ = {
 			isa = PBXGroup;
 			children = (
+				A436DF7229F4DE43007DFCEF /* ViewModel */,
+				A436DF7129F4DE3A007DFCEF /* View */,
 			);
 			path = SignInScene;
 			sourceTree = "<group>";
@@ -174,6 +188,7 @@
 		A436DF6C29F4CF7E007DFCEF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				A436DF7929F508D4007DFCEF /* SignInUseCases.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -183,6 +198,23 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A436DF7129F4DE3A007DFCEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */,
+				A436DF7629F4E81D007DFCEF /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A436DF7229F4DE43007DFCEF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A4CC5F9629EB8FE200C0C9F6 = {
@@ -453,11 +485,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */,
+				A436DF7A29F508D4007DFCEF /* SignInUseCases.swift in Sources */,
+				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
+				A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */,
 				A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */,
+				A436DF6F29F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,11 +519,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */,
+				A436DF7B29F508D4007DFCEF /* SignInUseCases.swift in Sources */,
+				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
+				A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A4CC5FD929EB8FF800C0C9F6 /* AppDelegate.swift in Sources */,
 				A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */,
+				A436DF7029F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
