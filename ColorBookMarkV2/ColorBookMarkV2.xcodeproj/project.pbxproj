@@ -29,10 +29,20 @@
 		A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */; };
 		A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7629F4E81D007DFCEF /* SignInViewController.swift */; };
 		A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7629F4E81D007DFCEF /* SignInViewController.swift */; };
-		A436DF7A29F508D4007DFCEF /* SignInUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7929F508D4007DFCEF /* SignInUseCases.swift */; };
-		A436DF7B29F508D4007DFCEF /* SignInUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7929F508D4007DFCEF /* SignInUseCases.swift */; };
+		A436DF7A29F508D4007DFCEF /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7929F508D4007DFCEF /* SignInUseCase.swift */; };
+		A436DF7B29F508D4007DFCEF /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF7929F508D4007DFCEF /* SignInUseCase.swift */; };
 		A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF8129FE1DAD007DFCEF /* Coordinator.swift */; };
 		A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF8129FE1DAD007DFCEF /* Coordinator.swift */; };
+		A436DF862A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF852A077FA8007DFCEF /* SignInCoordinatorDependencies.swift */; };
+		A436DF872A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF852A077FA8007DFCEF /* SignInCoordinatorDependencies.swift */; };
+		A436DF892A07802B007DFCEF /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF882A07802B007DFCEF /* SignInCoordinator.swift */; };
+		A436DF8A2A07802B007DFCEF /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF882A07802B007DFCEF /* SignInCoordinator.swift */; };
+		A436DF8D2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF8C2A078423007DFCEF /* DefaultSignInUseCase.swift */; };
+		A436DF8E2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF8C2A078423007DFCEF /* DefaultSignInUseCase.swift */; };
+		A436DF922A07861E007DFCEF /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF912A07861E007DFCEF /* SignInRepository.swift */; };
+		A436DF932A07861E007DFCEF /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF912A07861E007DFCEF /* SignInRepository.swift */; };
+		A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */; };
+		A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -74,8 +84,13 @@
 		A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
 		A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		A436DF7629F4E81D007DFCEF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		A436DF7929F508D4007DFCEF /* SignInUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCases.swift; sourceTree = "<group>"; };
+		A436DF7929F508D4007DFCEF /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		A436DF8129FE1DAD007DFCEF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A436DF852A077FA8007DFCEF /* SignInCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinatorDependencies.swift; sourceTree = "<group>"; };
+		A436DF882A07802B007DFCEF /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		A436DF8C2A078423007DFCEF /* DefaultSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignInUseCase.swift; sourceTree = "<group>"; };
+		A436DF912A07861E007DFCEF /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
+		A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignInRepository.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,7 +208,7 @@
 		A436DF6C29F4CF7E007DFCEF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				A436DF7929F508D4007DFCEF /* SignInUseCases.swift */,
+				A436DF972A078755007DFCEF /* SignIn */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 		A436DF6D29F4CF98007DFCEF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A436DF8F2A0785F7007DFCEF /* SignIn */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -225,6 +241,8 @@
 		A436DF7C29FDF9AE007DFCEF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A436DF842A077F76007DFCEF /* Protocol */,
+				A436DF882A07802B007DFCEF /* SignInCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -251,6 +269,48 @@
 				A436DF8129FE1DAD007DFCEF /* Coordinator.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A436DF842A077F76007DFCEF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF852A077FA8007DFCEF /* SignInCoordinatorDependencies.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A436DF8B2A078308007DFCEF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF7929F508D4007DFCEF /* SignInUseCase.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A436DF8F2A0785F7007DFCEF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF902A078604007DFCEF /* Protocol */,
+				A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A436DF902A078604007DFCEF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF912A07861E007DFCEF /* SignInRepository.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A436DF972A078755007DFCEF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF8C2A078423007DFCEF /* DefaultSignInUseCase.swift */,
+				A436DF8B2A078308007DFCEF /* Protocol */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		A4CC5F9629EB8FE200C0C9F6 = {
@@ -521,16 +581,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */,
-				A436DF7A29F508D4007DFCEF /* SignInUseCases.swift in Sources */,
+				A436DF7A29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
+				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */,
 				A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */,
+				A436DF892A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */,
+				A436DF862A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
+				A436DF8D2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
 				A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */,
 				A436DF6F29F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
+				A436DF922A07861E007DFCEF /* SignInRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,16 +621,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */,
-				A436DF7B29F508D4007DFCEF /* SignInUseCases.swift in Sources */,
+				A436DF7B29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
+				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */,
 				A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */,
+				A436DF8A2A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A4CC5FD929EB8FF800C0C9F6 /* AppDelegate.swift in Sources */,
+				A436DF872A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
+				A436DF8E2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
 				A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */,
 				A436DF7029F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
+				A436DF932A07861E007DFCEF /* SignInRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

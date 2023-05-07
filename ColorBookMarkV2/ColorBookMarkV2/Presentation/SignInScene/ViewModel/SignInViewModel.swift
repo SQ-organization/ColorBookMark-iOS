@@ -11,6 +11,8 @@ import RxSwift
 final class SignInViewModel {
     private let disposeBag = DisposeBag()
     
+    init(coordinator: SignInCoordinatorDependencies, signInUseCase: Signin)
+    
     struct Input {
         var kakaoSignInButtonTapped: Observable<Void>
         var appleSignInButtonTapped: Observable<Void>
@@ -21,6 +23,7 @@ final class SignInViewModel {
         // 비밀번호 입력 후 들어가가 탭 추가
     }
     
+    // 로그인 화면으로 방출하는 데이터는 없으므로 일단 output 빈값 유지
     struct Output {
         
     }
