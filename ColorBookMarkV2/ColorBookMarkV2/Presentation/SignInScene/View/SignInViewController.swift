@@ -21,10 +21,10 @@ final class SignInViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        setupLayout()
     }
     
-    private func setupUI() {
+    private func setupLayout() {
         [signInKakaoButton]
             .forEach({ view.addSubview($0) })
         signInKakaoButton.snp.makeConstraints({
@@ -34,6 +34,7 @@ final class SignInViewController: UIViewController {
         })
     }
     
+    // MARK: viewModel bind
     private func bind() {
         let input = SignInViewModel
             .Input(kakaoSignInButtonTapped: signInKakaoButton.rx.tap.asObservable(),

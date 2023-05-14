@@ -10,8 +10,13 @@ import RxSwift
 
 final class SignInViewModel {
     private let disposeBag = DisposeBag()
+    private let coordinator: SignInCoordinatorDependencies
+    private let useCase: SignInUseCase
     
-    init(coordinator: SignInCoordinatorDependencies, signInUseCase: Signin)
+    init(coordinator: SignInCoordinatorDependencies, signInUseCase: SignInUseCase) {
+        self.coordinator = coordinator
+        self.useCase = signInUseCase
+    }
     
     struct Input {
         var kakaoSignInButtonTapped: Observable<Void>
@@ -31,8 +36,9 @@ final class SignInViewModel {
     func transform(from input: Input, disposeBag: DisposeBag) -> Output {
         let output = Output()
         
-        input.kakaoSignInButtonTapped.subscribe(onNext: { _ in
-            
+        input.kakaoSignInButtonTapped
+            .subscribe(onNext: { [weak self] _ in
+            self?.coordinator.pushEmailInputViewController()
         })
         .disposed(by: disposeBag)
         
