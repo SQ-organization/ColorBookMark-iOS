@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 final class SignInViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     var viewModel: SignInViewModel?
     private let signInKakaoButton: UIButton = {
         let button = UIButton()
@@ -22,9 +23,11 @@ final class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        bind()
     }
     
     private func setupLayout() {
+        view.backgroundColor = .systemBackground
         [signInKakaoButton]
             .forEach({ view.addSubview($0) })
         signInKakaoButton.snp.makeConstraints({
@@ -40,5 +43,7 @@ final class SignInViewController: UIViewController {
             .Input(kakaoSignInButtonTapped: signInKakaoButton.rx.tap.asObservable(),
                    appleSignInButtonTapped: signInKakaoButton.rx.tap.asObservable(),
                    emailSignInButtonTapped: signInKakaoButton.rx.tap.asObservable())
+        let output = viewModel?.transform(from: input, disposeBag: disposeBag)
+        
     }
 }
