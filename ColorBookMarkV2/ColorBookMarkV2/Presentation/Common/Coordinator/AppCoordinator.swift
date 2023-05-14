@@ -18,6 +18,7 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         let coordinator = SignInCoordinator(navigationController)
+        coordinator.start()
     }
     
     
