@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import Combine
+import CombineCocoa
 
 final class SignInViewController: UIViewController {
+    private let cancellables = Set<AnyCancellable>()
     var viewModel: SignInViewModel?
     private let signInKakaoButton: UIButton = {
         let button = UIButton()
@@ -37,10 +40,10 @@ final class SignInViewController: UIViewController {
     // MARK: viewModel bind
     private func bind() {
         let input = SignInViewModel
-            .Input(kakaoSignInButtonTapped: signInKakaoButton.rx.tap.asObservable(),
-                   appleSignInButtonTapped: signInKakaoButton.rx.tap.asObservable(),
-                   emailSignInButtonTapped: signInKakaoButton.rx.tap.asObservable())
-        let output = viewModel?.transform(from: input, disposeBag: disposeBag)
+            .Input(kakaoSignInButtonTapped: signInKakaoButton.tapPublisher.eraseToAnyPublisher(),
+                   appleSignInButtonTapped: signInKakaoButton.tapPublisher.eraseToAnyPublisher(),
+                   emailSignInButtonTapped: signInKakaoButton.tapPublisher.eraseToAnyPublisher())
+        let output = viewModel?.transform(from: input)
         
     }
 }

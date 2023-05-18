@@ -5,9 +5,10 @@
 //  Created by SUN on 2023/04/23.
 //
 
-import Foundation
+import Combine
 
 final class SignInViewModel {
+    private var cancellables = Set<AnyCancellable>()
     private let coordinator: SignInCoordinatorDependencies
     private let useCase: SignInUseCase
     
@@ -17,9 +18,9 @@ final class SignInViewModel {
     }
     
     struct Input {
-        var kakaoSignInButtonTapped: Observable<Void>
-        var appleSignInButtonTapped: Observable<Void>
-        var emailSignInButtonTapped: Observable<Void>
+        var kakaoSignInButtonTapped: AnyPublisher<Void, Never>
+        var appleSignInButtonTapped: AnyPublisher<Void, Never>
+        var emailSignInButtonTapped: AnyPublisher<Void, Never>
         
         // email text 입력 완료 버튼 탭
         // 계속하기 버튼 탭
@@ -31,14 +32,14 @@ final class SignInViewModel {
         
     }
     
-    func transform(from input: Input, disposeBag: DisposeBag) -> Output {
+    func transform(from input: Input) -> Output {
         let output = Output()
         
         input.kakaoSignInButtonTapped
-            .subscribe(onNext: { [weak self] _ in
-            self?.coordinator.pushEmailInputViewController()
-        })
-        .disposed(by: disposeBag)
+            .sink(receiveValue: { [weak self] _ in
+                self?.coordinator.pushEmailInputViewController()
+            })
+            .store(in: &cancellables)
         
         return output
     }
