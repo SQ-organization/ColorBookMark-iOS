@@ -6,10 +6,8 @@
 //
 
 import Foundation
-import RxSwift
 
 final class SignInViewModel {
-    private let disposeBag = DisposeBag()
     private let coordinator: SignInCoordinatorDependencies
     private let useCase: SignInUseCase
     

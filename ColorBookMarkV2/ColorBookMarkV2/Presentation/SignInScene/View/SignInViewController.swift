@@ -7,11 +7,8 @@
 
 import UIKit
 import SnapKit
-import RxSwift
-import RxCocoa
 
 final class SignInViewController: UIViewController {
-    private let disposeBag = DisposeBag()
     var viewModel: SignInViewModel?
     private let signInKakaoButton: UIButton = {
         let button = UIButton()

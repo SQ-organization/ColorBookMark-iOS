@@ -39,6 +39,8 @@
 		A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF982A1080D1007DFCEF /* AppCoordinator.swift */; };
 		A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */; };
 		A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */; };
+		A436DFA02A16520E007DFCEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A436DF9F2A16520E007DFCEF /* CombineCocoa */; };
+		A436DFA22A165226007DFCEF /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A436DFA12A165226007DFCEF /* CombineCocoa */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -112,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4172CE429EEE8B100F328DD /* SnapKit in Frameworks */,
+				A436DFA02A16520E007DFCEF /* CombineCocoa in Frameworks */,
 				A4172CDF29EEE89F00F328DD /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4172CF229EEE8F900F328DD /* SnapKit in Frameworks */,
+				A436DFA22A165226007DFCEF /* CombineCocoa in Frameworks */,
 				A4172CEE29EEE8F900F328DD /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 			packageProductDependencies = (
 				A4172CDE29EEE89F00F328DD /* Moya */,
 				A4172CE329EEE8B100F328DD /* SnapKit */,
+				A436DF9F2A16520E007DFCEF /* CombineCocoa */,
 			);
 			productName = ColorBookMarkV2;
 			productReference = A4CC5F9F29EB8FE200C0C9F6 /* Release.app */;
@@ -470,6 +475,7 @@
 			packageProductDependencies = (
 				A4172CED29EEE8F900F328DD /* Moya */,
 				A4172CF129EEE8F900F328DD /* SnapKit */,
+				A436DFA12A165226007DFCEF /* CombineCocoa */,
 			);
 			productName = ColorBookMarkV2;
 			productReference = A4CC5FE329EB8FF800C0C9F6 /* Debug.app */;
@@ -510,6 +516,7 @@
 			packageReferences = (
 				A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */,
 				A4172CE229EEE8B100F328DD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A436DF9E2A16520E007DFCEF /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = A4CC5FA029EB8FE200C0C9F6 /* Products */;
 			projectDirPath = "";
@@ -1018,6 +1025,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		A436DF9E2A16520E007DFCEF /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1040,6 +1055,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4172CE229EEE8B100F328DD /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		A436DF9F2A16520E007DFCEF /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A436DF9E2A16520E007DFCEF /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		A436DFA12A165226007DFCEF /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A436DF9E2A16520E007DFCEF /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 
