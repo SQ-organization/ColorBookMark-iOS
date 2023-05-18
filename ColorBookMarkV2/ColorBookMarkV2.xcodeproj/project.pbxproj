@@ -7,17 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4172CD629EEE88700F328DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CD529EEE88700F328DD /* RxCocoa */; };
-		A4172CD829EEE88700F328DD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CD729EEE88700F328DD /* RxRelay */; };
-		A4172CDA29EEE88700F328DD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CD929EEE88700F328DD /* RxSwift */; };
 		A4172CDF29EEE89F00F328DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CDE29EEE89F00F328DD /* Moya */; };
-		A4172CE129EEE89F00F328DD /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE029EEE89F00F328DD /* RxMoya */; };
 		A4172CE429EEE8B100F328DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE329EEE8B100F328DD /* SnapKit */; };
-		A4172CE629EEE8F900F328DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE529EEE8F900F328DD /* RxCocoa */; };
-		A4172CE829EEE8F900F328DD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE729EEE8F900F328DD /* RxRelay */; };
-		A4172CEA29EEE8F900F328DD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CE929EEE8F900F328DD /* RxSwift */; };
 		A4172CEE29EEE8F900F328DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CED29EEE8F900F328DD /* Moya */; };
-		A4172CF029EEE8F900F328DD /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CEF29EEE8F900F328DD /* RxMoya */; };
 		A4172CF229EEE8F900F328DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4172CF129EEE8F900F328DD /* SnapKit */; };
 		A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6029F4C2F5007DFCEF /* StringConstant.swift */; };
 		A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF6029F4C2F5007DFCEF /* StringConstant.swift */; };
@@ -45,6 +37,8 @@
 		A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */; };
 		A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF982A1080D1007DFCEF /* AppCoordinator.swift */; };
 		A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF982A1080D1007DFCEF /* AppCoordinator.swift */; };
+		A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */; };
+		A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -94,6 +88,7 @@
 		A436DF912A07861E007DFCEF /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
 		A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignInRepository.swift; sourceTree = "<group>"; };
 		A436DF982A1080D1007DFCEF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,12 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4172CE129EEE89F00F328DD /* RxMoya in Frameworks */,
-				A4172CDA29EEE88700F328DD /* RxSwift in Frameworks */,
 				A4172CE429EEE8B100F328DD /* SnapKit in Frameworks */,
-				A4172CD829EEE88700F328DD /* RxRelay in Frameworks */,
 				A4172CDF29EEE89F00F328DD /* Moya in Frameworks */,
-				A4172CD629EEE88700F328DD /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,12 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4172CF029EEE8F900F328DD /* RxMoya in Frameworks */,
-				A4172CEA29EEE8F900F328DD /* RxSwift in Frameworks */,
 				A4172CF229EEE8F900F328DD /* SnapKit in Frameworks */,
-				A4172CE829EEE8F900F328DD /* RxRelay in Frameworks */,
 				A4172CEE29EEE8F900F328DD /* Moya in Frameworks */,
-				A4172CE629EEE8F900F328DD /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				A436DF6329F4C39D007DFCEF /* DateExtension.swift */,
+				A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -423,11 +411,7 @@
 			);
 			name = Release;
 			packageProductDependencies = (
-				A4172CD529EEE88700F328DD /* RxCocoa */,
-				A4172CD729EEE88700F328DD /* RxRelay */,
-				A4172CD929EEE88700F328DD /* RxSwift */,
 				A4172CDE29EEE89F00F328DD /* Moya */,
-				A4172CE029EEE89F00F328DD /* RxMoya */,
 				A4172CE329EEE8B100F328DD /* SnapKit */,
 			);
 			productName = ColorBookMarkV2;
@@ -484,11 +468,7 @@
 			);
 			name = Debug;
 			packageProductDependencies = (
-				A4172CE529EEE8F900F328DD /* RxCocoa */,
-				A4172CE729EEE8F900F328DD /* RxRelay */,
-				A4172CE929EEE8F900F328DD /* RxSwift */,
 				A4172CED29EEE8F900F328DD /* Moya */,
-				A4172CEF29EEE8F900F328DD /* RxMoya */,
 				A4172CF129EEE8F900F328DD /* SnapKit */,
 			);
 			productName = ColorBookMarkV2;
@@ -528,7 +508,6 @@
 			);
 			mainGroup = A4CC5F9629EB8FE200C0C9F6;
 			packageReferences = (
-				A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */,
 				A4172CE229EEE8B100F328DD /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
@@ -589,6 +568,7 @@
 				A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
+				A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
 				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
@@ -630,6 +610,7 @@
 				A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
+				A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
 				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
@@ -1021,14 +1002,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1048,60 +1021,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A4172CD529EEE88700F328DD /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A4172CD729EEE88700F328DD /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		A4172CD929EEE88700F328DD /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		A4172CDE29EEE89F00F328DD /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
-		};
-		A4172CE029EEE89F00F328DD /* RxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = RxMoya;
 		};
 		A4172CE329EEE8B100F328DD /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A4172CE229EEE8B100F328DD /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		A4172CE529EEE8F900F328DD /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A4172CE729EEE8F900F328DD /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		A4172CE929EEE8F900F328DD /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CD429EEE88700F328DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		A4172CED29EEE8F900F328DD /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
-		};
-		A4172CEF29EEE8F900F328DD /* RxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4172CDD29EEE89F00F328DD /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = RxMoya;
 		};
 		A4172CF129EEE8F900F328DD /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
