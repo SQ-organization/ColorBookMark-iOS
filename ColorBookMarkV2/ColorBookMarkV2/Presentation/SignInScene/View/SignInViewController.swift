@@ -13,13 +13,24 @@ import CombineCocoa
 final class SignInViewController: UIViewController {
     private let cancellables = Set<AnyCancellable>()
     var viewModel: SignInViewModel?
-    private let signInKakaoButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .yellow
-        button.setTitle("카카오", for: .normal)
-        button.setImage(UIImage(named: "kakaoImage"), for: .normal)
-        return button
+    
+    private var logoImageView: UIImageView = {
+        let image = UIImage(named: "logoImage")
+        let imageView = UIImageView(image: image)
+        return imageView
     }()
+    
+    private var welcomeLabel: UILabel = {
+        let label = UILabel()
+        label.text = StringConstant.letsStartColorBookMark
+        label.textColor = .light_B02_Text
+        label.textAlignment = .center
+        return label
+    }()
+    private let stackView: UIStackView = UIStackView()
+    private let signInKakaoButton: SignInButtonView = SignInButtonView(signInType: .kakao)
+    private let signInAppleButton: SignInButtonView = SignInButtonView(signInType: .apple)
+    private let signInEmailButton: SignInButtonView = SignInButtonView(signInType: .email)
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -28,21 +39,64 @@ final class SignInViewController: UIViewController {
     
     private func setupLayout() {
         view.backgroundColor = .systemBackground
-        [signInKakaoButton]
+        stackView.axis = .vertical
+        stackView.spacing = 12.0
+        stackView.distribution = .equalSpacing
+        [logoImageView,
+         welcomeLabel,
+         stackView]
             .forEach({ view.addSubview($0) })
+        
+        [signInKakaoButton,
+         signInAppleButton,
+         signInEmailButton]
+            .forEach({ stackView.addArrangedSubview($0) })
+        
+        
+        logoImageView.snp.makeConstraints({
+            $0.width.equalTo(172.0)
+            $0.height.equalTo(144.0)
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().inset(170.0)
+            
+        })
+        
+        welcomeLabel.snp.makeConstraints({
+            $0.top.equalTo(logoImageView.snp.bottom).offset(24.0)
+            $0.horizontalEdges.equalToSuperview()
+        })
+        
+        stackView.snp.makeConstraints({
+            $0.horizontalEdges.equalToSuperview().inset(16.0)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(24.0)
+        })
+        
+        signInEmailButton.snp.makeConstraints({
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(48.0)
+//            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(24.0)
+        })
+//
+        signInAppleButton.snp.makeConstraints({
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(48.0)
+//            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(24.0)
+        })
+
         signInKakaoButton.snp.makeConstraints({
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(50.0)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(20.0)
+            $0.height.equalTo(48.0)
         })
+//
+        
     }
     
     // MARK: viewModel bind
     private func bind() {
         let input = SignInViewModel
-            .Input(kakaoSignInButtonTapped: signInKakaoButton.tapPublisher.eraseToAnyPublisher(),
-                   appleSignInButtonTapped: signInKakaoButton.tapPublisher.eraseToAnyPublisher(),
-                   emailSignInButtonTapped: signInKakaoButton.tapPublisher.eraseToAnyPublisher())
+            .Input(kakaoSignInButtonTapped: signInKakaoButton.gesture(.tap()),
+                   appleSignInButtonTapped: signInAppleButton.gesture(.tap()),
+                   emailSignInButtonTapped: signInEmailButton.gesture(.tap()))
         let output = viewModel?.transform(from: input)
         
     }

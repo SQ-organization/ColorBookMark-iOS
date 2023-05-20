@@ -6,6 +6,7 @@
 //
 
 import Combine
+import UIKit
 
 final class SignInViewModel {
     private var cancellables = Set<AnyCancellable>()
@@ -18,9 +19,9 @@ final class SignInViewModel {
     }
     
     struct Input {
-        var kakaoSignInButtonTapped: AnyPublisher<Void, Never>
-        var appleSignInButtonTapped: AnyPublisher<Void, Never>
-        var emailSignInButtonTapped: AnyPublisher<Void, Never>
+        var kakaoSignInButtonTapped: AnyPublisher<GestureType, Never>
+        var appleSignInButtonTapped: AnyPublisher<GestureType, Never>
+        var emailSignInButtonTapped: AnyPublisher<GestureType, Never>
         
         // email text 입력 완료 버튼 탭
         // 계속하기 버튼 탭
