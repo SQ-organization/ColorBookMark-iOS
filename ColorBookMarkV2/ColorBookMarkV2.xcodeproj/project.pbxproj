@@ -66,6 +66,8 @@
 		A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FDD29EB8FF800C0C9F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CC5FB029EB8FE300C0C9F6 /* LaunchScreen.storyboard */; };
 		A4CC5FDE29EB8FF800C0C9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CC5FAE29EB8FE300C0C9F6 /* Assets.xcassets */; };
+		E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E1552A1B382C0037E0B2 /* SignInWithEmailViewModel.swift */; };
+		E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E1552A1B382C0037E0B2 /* SignInWithEmailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,7 @@
 		A4CC5FC829EB8FE400C0C9F6 /* ColorBookMarkV2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBookMarkV2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4CC5FE329EB8FF800C0C9F6 /* Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FE429EB8FF800C0C9F6 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
+		E950E1552A1B382C0037E0B2 /* SignInWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */,
+				E950E1552A1B382C0037E0B2 /* SignInWithEmailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -615,6 +619,7 @@
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
 				A436DFAF2A184E03007DFCEF /* GestureSubscriber.swift in Sources */,
 				A436DFA82A184337007DFCEF /* UIColorExtension.swift in Sources */,
+				E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */,
@@ -662,6 +667,7 @@
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
 				A436DFB02A184E03007DFCEF /* GestureSubscriber.swift in Sources */,
 				A436DFA92A184337007DFCEF /* UIColorExtension.swift in Sources */,
+				E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */,
