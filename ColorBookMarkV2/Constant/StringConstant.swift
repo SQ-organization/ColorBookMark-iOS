@@ -21,5 +21,4 @@ struct StringConstant {
     static let emailWarning: String = "올바른 이메일 형식으로 입력해주세요!"
     static let emailNotice: String = "이메일이 정확하지 않으면 비밀번호 분실 시 찾기 어려울 수 있습니다!"
     static let continueText: String = "계속하기"
-  
 }

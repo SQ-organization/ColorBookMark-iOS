@@ -24,6 +24,7 @@ final class SignInWithEmailViewModel {
     }
     
     struct Output {
+        var emailTextIsValid: AnyPublisher<Bool, Never>
         var continueButtonIsValid: AnyPublisher<Bool, Never>
     }
     
@@ -31,14 +32,20 @@ final class SignInWithEmailViewModel {
         input.continueButtonTapped
             .sink(receiveValue: { [weak self] _ in
                 // move to passwordViewController
+                // signupScene
             })
             .store(in: &cancellables)
+        
+        let emailTextStatePublisher = input.emailTextInput
+            .compactMap { $0 }
+            .map { $0.count > 0 && !($0.contains("@"))}
+            .eraseToAnyPublisher()
         
         let buttonStatePublisher = input.emailTextInput
             .compactMap { $0 }
             .map { $0.count > 0 && $0.contains("@")}
             .eraseToAnyPublisher()
         
-        return Output(continueButtonIsValid: buttonStatePublisher)
+        return Output(emailTextIsValid: emailTextStatePublisher, continueButtonIsValid: buttonStatePublisher)
     }
 }

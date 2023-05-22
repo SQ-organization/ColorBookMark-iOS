@@ -17,6 +17,7 @@ final class SignInWithEmailViewController: UIViewController {
     private var emailTitleLabel: UILabel = {
         let label = UILabel()
         label.text = StringConstant.startColorBookMark
+        label.font = .Pretendard(.medium, size: 16)
         label.textColor = .light_B02_Text
         label.textAlignment = .center
         return label
@@ -24,8 +25,7 @@ final class SignInWithEmailViewController: UIViewController {
     
     private var cancelButton: UIButton = {
         let button = UIButton()
-        //        button.setImage(UIImage(systemName: "icClose"), for: .normal)
-        button.setImage(UIImage(systemName: "logoImage"), for: .normal)
+        button.setImage(UIImage(systemName: "icClose"), for: .normal)
         return button
     }()
     
@@ -38,6 +38,7 @@ final class SignInWithEmailViewController: UIViewController {
     private var enterEmailLabel: UILabel = {
         let label = UILabel()
         label.text = StringConstant.enterEmail
+        label.font = .Pretendard(.bold, size: 24)
         label.textColor = .light_B02_Text
         label.textAlignment = .center
         return label
@@ -46,6 +47,7 @@ final class SignInWithEmailViewController: UIViewController {
     private var emailHandlingLabel: UILabel = {
         let label = UILabel()
         label.text = StringConstant.emailHandling
+        label.font = .Pretendard(.medium, size: 16)
         label.textColor = .light_B02_Text
         label.textAlignment = .center
         return label
@@ -62,6 +64,7 @@ final class SignInWithEmailViewController: UIViewController {
     private var emailWarningLabel: UILabel = {
         let label = UILabel()
         label.text = StringConstant.emailWarning
+        label.font = .Pretendard(.medium, size: 12)
         label.textColor = .light_Error
         label.textAlignment = .center
         return label
@@ -70,6 +73,7 @@ final class SignInWithEmailViewController: UIViewController {
     private var emailNoticeLabel: UILabel = {
         let label = UILabel()
         label.text = StringConstant.emailNotice
+        label.font = .Pretendard(.bold, size: 12)
         label.textColor = .light_B02_Text
         label.textAlignment = .center
         return label
@@ -78,6 +82,7 @@ final class SignInWithEmailViewController: UIViewController {
     private var continueButton: UIButton = {
         let button = UIButton()
         button.setTitle(StringConstant.continueText, for: .normal)
+        button.titleLabel?.font = .Pretendard(.bold, size: 16)
         button.setTitleColor(.veryLightPink, for: .normal)
         button.backgroundColor = .light_G02
         button.layer.cornerRadius = 22.5
@@ -168,6 +173,14 @@ final class SignInWithEmailViewController: UIViewController {
                 self?.continueButton.isEnabled = state
                 self?.continueButton.setTitleColor(state ? .light_G00 : .veryLightPink, for: .normal)
                 self?.continueButton.backgroundColor = state ? .light_B01 : .light_G02
+            })
+            .store(in: &cancellables)
+        
+        output?
+            .emailTextIsValid
+            .sink(receiveValue: { [weak self] state in
+                self?.emailWarningLabel.isHidden = !state
+                //TODO: textfield underline 추가하기
             })
             .store(in: &cancellables)
     }
