@@ -80,6 +80,8 @@
 		E950E1652A1B5E060037E0B2 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */; };
 		E950E1662A1B5E060037E0B2 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */; };
 		E950E1672A1B5E060037E0B2 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */; };
+		E950E17C2A1F3A3A0037E0B2 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */; };
+		E950E17D2A1F3D290037E0B2 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,7 @@
 		E950E1592A1B5D930037E0B2 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		E950E15E2A1B5DA30037E0B2 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +437,7 @@
 				A436DFA72A184337007DFCEF /* UIColorExtension.swift */,
 				A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */,
 				E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */,
+				E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -651,6 +655,7 @@
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
+				E950E17C2A1F3A3A0037E0B2 /* UITextFieldExtension.swift in Sources */,
 				A436DFAF2A184E03007DFCEF /* GestureSubscriber.swift in Sources */,
 				A436DFA82A184337007DFCEF /* UIColorExtension.swift in Sources */,
 				E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
@@ -702,6 +707,7 @@
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
+				E950E17D2A1F3D290037E0B2 /* UITextFieldExtension.swift in Sources */,
 				A436DFB02A184E03007DFCEF /* GestureSubscriber.swift in Sources */,
 				A436DFA92A184337007DFCEF /* UIColorExtension.swift in Sources */,
 				E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,

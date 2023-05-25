@@ -13,6 +13,8 @@ final class SignInWithEmailViewModel {
     private let coordinator: SignInCoordinatorDependencies
     private let useCase: SignInUseCase
     
+    let emailCheckList = ["@", ".com"]
+    
     init(coordinator: SignInCoordinatorDependencies, signInUseCase: SignInUseCase) {
         self.coordinator = coordinator
         self.useCase = signInUseCase
@@ -24,7 +26,7 @@ final class SignInWithEmailViewModel {
     }
     
     struct Output {
-        var emailTextIsValid: AnyPublisher<Bool, Never>
+        var emailTextInvalid: AnyPublisher<Bool, Never>
         var continueButtonIsValid: AnyPublisher<Bool, Never>
     }
     
@@ -38,14 +40,14 @@ final class SignInWithEmailViewModel {
         
         let emailTextStatePublisher = input.emailTextInput
             .compactMap { $0 }
-            .map { $0.count > 0 && !($0.contains("@"))}
+            .map { [self] in $0.count > 0 && !emailCheckList.allSatisfy($0.contains)}
             .eraseToAnyPublisher()
         
         let buttonStatePublisher = input.emailTextInput
             .compactMap { $0 }
-            .map { $0.count > 0 && $0.contains("@")}
+            .map { [self] in emailCheckList.allSatisfy($0.contains)}
             .eraseToAnyPublisher()
         
-        return Output(emailTextIsValid: emailTextStatePublisher, continueButtonIsValid: buttonStatePublisher)
+        return Output(emailTextInvalid: emailTextStatePublisher, continueButtonIsValid: buttonStatePublisher)
     }
 }

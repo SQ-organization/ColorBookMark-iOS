@@ -56,7 +56,9 @@ final class SignInWithEmailViewController: UIViewController {
     private var emailTextfield: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = StringConstant.emailPlaceholder
-        textfield.borderStyle = .roundedRect
+        textfield.layer.cornerRadius = 5
+        textfield.layer.borderColor = UIColor.light_G05?.cgColor
+        textfield.layer.borderWidth = 1
         return textfield
         
     }()
@@ -177,10 +179,17 @@ final class SignInWithEmailViewController: UIViewController {
             .store(in: &cancellables)
         
         output?
-            .emailTextIsValid
+            .emailTextInvalid
             .sink(receiveValue: { [weak self] state in
-                self?.emailWarningLabel.isHidden = !state
-                //TODO: textfield underline 추가하기
+                if state {      // email state invalid
+                    self?.emailWarningLabel.isHidden = false
+                    self?.emailTextfield.setUnderline(color: .light_Error!)
+                }
+                else {          // email state valid
+                    self?.emailWarningLabel.isHidden = true
+                    self?.emailTextfield.setUnderline(color: .light_B01!)
+                    
+                }
             })
             .store(in: &cancellables)
     }

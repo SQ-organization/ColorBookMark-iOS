@@ -20,5 +20,5 @@ extension UIColor {
     static let light_B01 = UIColor(named: "Light_B01")
     static let light_G00 = UIColor(named: "Light_G00")
     static let light_Error = UIColor(named: "Light_Error")
-    
+    static let light_G05 = UIColor(named: "Light_G05")
 }
