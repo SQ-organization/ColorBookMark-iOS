@@ -51,6 +51,8 @@
 		A436DFB02A184E03007DFCEF /* GestureSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFAE2A184E03007DFCEF /* GestureSubscriber.swift */; };
 		A436DFB22A184E3B007DFCEF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */; };
 		A436DFB32A184E3B007DFCEF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */; };
+		A436DFB52A185AB9007DFCEF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB42A185AB9007DFCEF /* CustomTextField.swift */; };
+		A436DFB62A185AB9007DFCEF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB42A185AB9007DFCEF /* CustomTextField.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -106,6 +108,7 @@
 		A436DFAB2A184CA6007DFCEF /* GesturePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturePublisher.swift; sourceTree = "<group>"; };
 		A436DFAE2A184E03007DFCEF /* GestureSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSubscriber.swift; sourceTree = "<group>"; };
 		A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		A436DFB42A185AB9007DFCEF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				A436DFA42A17B6CB007DFCEF /* SignInButtonView.swift */,
+				A436DFB42A185AB9007DFCEF /* CustomTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -626,6 +630,7 @@
 				A436DF862A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
 				A436DF8D2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
 				A436DFB22A184E3B007DFCEF /* UIViewExtension.swift in Sources */,
+				A436DFB52A185AB9007DFCEF /* CustomTextField.swift in Sources */,
 				A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */,
 				A436DF6F29F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
 				A436DF922A07861E007DFCEF /* SignInRepository.swift in Sources */,
@@ -673,6 +678,7 @@
 				A436DF872A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
 				A436DF8E2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
 				A436DFB32A184E3B007DFCEF /* UIViewExtension.swift in Sources */,
+				A436DFB62A185AB9007DFCEF /* CustomTextField.swift in Sources */,
 				A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */,
 				A436DF7029F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
 				A436DF932A07861E007DFCEF /* SignInRepository.swift in Sources */,

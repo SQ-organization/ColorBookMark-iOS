@@ -8,7 +8,6 @@
 import UIKit
 
 final class SignInWithEmailViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
