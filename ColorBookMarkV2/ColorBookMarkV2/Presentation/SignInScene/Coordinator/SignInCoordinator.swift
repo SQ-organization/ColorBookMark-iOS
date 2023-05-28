@@ -13,10 +13,12 @@ final class SignInCoordinator: SignInCoordinatorDependencies {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private var signInViewController: SignInViewController
+    private var signInWithEmailViewController: SignInWithEmailViewController
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.signInViewController = SignInViewController()
+        self.signInWithEmailViewController = SignInWithEmailViewController()
     }
     
     func start() {
@@ -30,9 +32,8 @@ final class SignInCoordinator: SignInCoordinatorDependencies {
     }
     
     func pushEmailInputViewController() {
-        let vc = SignInWithEmailViewController()
-        self.navigationController.pushViewController(vc, animated: true)
+        self.signInWithEmailViewController.viewModel = SignInWithEmailViewModel(coordinator: self,
+                                                                                signInUseCase: DefaultSignInUseCase(repository: DefaultSignInRepository()))
+        self.navigationController.viewControllers = [signInWithEmailViewController]
     }
-    
-    
 }
