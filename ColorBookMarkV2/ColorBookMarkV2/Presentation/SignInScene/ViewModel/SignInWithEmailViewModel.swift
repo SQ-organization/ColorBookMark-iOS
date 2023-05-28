@@ -22,7 +22,7 @@ final class SignInWithEmailViewModel {
     
     struct Input {
         var emailTextInput: AnyPublisher<String?, Never>
-        var continueButtonTapped: AnyPublisher<GestureType, Never>
+        var continueButtonTapped: AnyPublisher<Void, Never>
     }
     
     struct Output {

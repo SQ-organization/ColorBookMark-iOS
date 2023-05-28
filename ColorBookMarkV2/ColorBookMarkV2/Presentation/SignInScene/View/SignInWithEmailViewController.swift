@@ -166,7 +166,7 @@ final class SignInWithEmailViewController: UIViewController {
     private func bind() {
         let input = SignInWithEmailViewModel
             .Input(emailTextInput: self.emailTextfield.textPublisher,
-                   continueButtonTapped: continueButton.gesture(.tap()))
+                   continueButtonTapped: continueButton.tapPublisher)
         let output = viewModel?.transform(from: input)
         
         output?
