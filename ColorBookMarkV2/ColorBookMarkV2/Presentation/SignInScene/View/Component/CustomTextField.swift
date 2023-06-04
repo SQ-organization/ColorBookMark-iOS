@@ -25,9 +25,12 @@ final class CustomTextField: UIStackView {
     
     private let errorLabel: UILabel = {
         let label = UILabel()
+        label.font = .Pretendard(.medium, size: 12)
         label.textAlignment = .center
+        label.text = " "
         return label
     }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupLayout()
@@ -81,17 +84,16 @@ final class CustomTextField: UIStackView {
     private func changeStatusBar(state: TextFieldState) {
         switch state {
         case .empty:
-            self.stateBar.backgroundColor = .clear
-            self.errorLabel.text = ""
+            self.errorLabel.text = " "
         case .typing:
-            self.stateBar.backgroundColor = .black
-            self.errorLabel.text = ""
+            textField.setUnderline(color: .component_primary!)
+            self.errorLabel.text = " "
         case .error(message: let message):
-            self.stateBar.backgroundColor = .red
+            textField.setUnderline(color: .sub_error!)
             self.errorLabel.text = message
-            self.errorLabel.textColor = .black
+            self.errorLabel.textColor = .sub_error
         case .done(message: let message):
-            self.stateBar.backgroundColor = .black
+            textField.setUnderline(color: .black)
             self.errorLabel.text = message
             self.errorLabel.textColor = .black
         }

@@ -10,8 +10,10 @@ import SnapKit
 import RxSwift
 import RxCocoa
 import Combine
+
 final class SignInWithEmailViewController: UIViewController {
     private var cancellables = Set<AnyCancellable>()
+    private var disposeBag = DisposeBag()
     var viewModel: SignInWithEmailViewModel?
     
     private var emailTitleLabel: UILabel = {
@@ -53,23 +55,11 @@ final class SignInWithEmailViewController: UIViewController {
         return label
     }()
     
-    private var emailTextfield: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = StringConstant.emailPlaceholder
-        textfield.layer.cornerRadius = 5
-        textfield.layer.borderColor = UIColor.light_G05?.cgColor
-        textfield.layer.borderWidth = 1
-        return textfield
-        
-    }()
-    
-    private var emailWarningLabel: UILabel = {
-        let label = UILabel()
-        label.text = StringConstant.emailWarning
-        label.font = .Pretendard(.medium, size: 12)
-        label.textColor = .light_Error
-        label.textAlignment = .center
-        return label
+    private var emailTextfield: CustomTextField = {
+        let textField = CustomTextField()
+        textField.setReturnKey(.done)
+        textField.setPlaceHolder(StringConstant.emailPlaceholder)
+        return textField
     }()
     
     private var emailNoticeLabel: UILabel = {
@@ -107,7 +97,6 @@ final class SignInWithEmailViewController: UIViewController {
          enterEmailLabel,
          emailHandlingLabel,
          emailTextfield,
-         emailWarningLabel,
          emailNoticeLabel,
          continueButton]
             .forEach({ view.addSubview($0) })
@@ -140,14 +129,9 @@ final class SignInWithEmailViewController: UIViewController {
         
         emailTextfield.snp.makeConstraints({
             $0.top.equalTo(emailHandlingLabel.snp.bottom).offset(23.0)
-            $0.width.equalTo(380.0)
-            $0.height.equalTo(48.0)
-            $0.centerX.equalToSuperview()
-        })
-        
-        emailWarningLabel.snp.makeConstraints({
-            $0.top.equalTo(emailTextfield.snp.bottom).offset(8.0)
-            $0.horizontalEdges.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview().inset(24.0)
+            
+            
         })
         
         emailNoticeLabel.snp.makeConstraints({
@@ -164,33 +148,32 @@ final class SignInWithEmailViewController: UIViewController {
     }
     
     private func bind() {
-//        let input = SignInWithEmailViewModel
-//            .Input(emailTextInput: self.emailTextfield.textPublisher,
-//                   continueButtonTapped: continueButton.tapPublisher)
-//        let output = viewModel?.transform(from: input)
-//
-//        output?
-//            .continueButtonIsValid
-//            .sink(receiveValue: { [weak self] state in
-//                self?.continueButton.isEnabled = state
-//                self?.continueButton.setTitleColor(state ? .light_G00 : .veryLightPink, for: .normal)
-//                self?.continueButton.backgroundColor = state ? .light_B01 : .light_G02
-//            })
-//            .store(in: &cancellables)
-//
-//        output?
-//            .emailTextInvalid
-//            .sink(receiveValue: { [weak self] state in
-//                if state {      // email state invalid
-//                    self?.emailWarningLabel.isHidden = false
-//                    self?.emailTextfield.setUnderline(color: .light_Error!)
-//                }
-//                else {          // email state valid
-//                    self?.emailWarningLabel.isHidden = true
-//                    self?.emailTextfield.setUnderline(color: .light_B01!)
-//
-//                }
-//            })
-//            .store(in: &cancellables)
+        let input = SignInWithEmailViewModel.Input(emailTextInput: emailTextfield.textPublisher(), continueButtonTapped: continueButton.rx.tap.asObservable())
+        let output = viewModel?.transform(from: input)
+        
+        output?
+            .continueButtonIsValid
+            .subscribe(onNext: { state in
+                self.enableContinueButton(state: state)
+            }).disposed(by: disposeBag)
+        
+        output?
+            .emailTextValid
+            .filter { !$0 }
+            .subscribe(onNext: { state in
+                self.enableContinueButton(state: false)
+            }).disposed(by: disposeBag)
+        
+        output?.emailTextFieldOutput
+            .subscribe(onNext: { [weak self] in
+                self?.emailTextfield.textFieldStateSubject.onNext($0)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func enableContinueButton(state: Bool) {
+        continueButton.isEnabled = state
+        continueButton.setTitleColor(state ? .txt_component : .txt_disabled, for: .normal)
+        continueButton.backgroundColor = state ? .component_primary : .component_disabled
     }
 }
