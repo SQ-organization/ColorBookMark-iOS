@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import Combine
 
-extension UIView {
-    func gesture(_ gestureType: GestureType = .tap()) -> AnyPublisher<GestureType, Never> {
-        GesturePublisher.init(view: self, gestureType: gestureType)
-        .eraseToAnyPublisher()
-    }
-}
-
+//extension UIView {
+//    func gesture(_ gestureType: GestureType = .tap()) -> AnyPublisher<GestureType, Never> {
+//        GesturePublisher.init(view: self, gestureType: gestureType)
+//        .eraseToAnyPublisher()
+//    }
+//}
+//

@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import Combine
+import RxSwift
 
 final class DefaultSignInUseCase: SignInUseCase {
     private let repository: SignInRepository
-    var isRegistered = PassthroughSubject<Bool, Never>()
+    var isRegistered = PublishSubject<Bool>()
     
     init(repository: SignInRepository) {
         self.repository = repository

@@ -5,11 +5,11 @@
 //  Created by 김지훈 on 2023/05/21.
 //
 
-import Combine
 import UIKit
+import RxSwift
 
 final class SignInWithEmailViewModel {
-    private var cancellables = Set<AnyCancellable>()
+    private var disposeBag = DisposeBag()
     private let coordinator: SignInCoordinatorDependencies
     private let useCase: SignInUseCase
     
@@ -21,32 +21,32 @@ final class SignInWithEmailViewModel {
     }
     
     struct Input {
-        var emailTextInput: AnyPublisher<String?, Never>
-        var continueButtonTapped: AnyPublisher<Void, Never>
+        var emailTextInput: Observable<String?>
+        var continueButtonTapped: Observable<Void>
     }
     
     struct Output {
-        var emailTextInvalid: AnyPublisher<Bool, Never>
-        var continueButtonIsValid: AnyPublisher<Bool, Never>
+        var emailTextInvalid: Observable<Bool>
+        var continueButtonIsValid: Observable<Bool>
     }
     
     func transform(from input: Input) -> Output {
         input.continueButtonTapped
-            .sink(receiveValue: { [weak self] _ in
+            .subscribe(onNext: { [weak self] _ in
                 // move to passwordViewController
                 // signupScene
             })
-            .store(in: &cancellables)
+            .disposed(by: disposeBag)
         
         let emailTextStatePublisher = input.emailTextInput
             .compactMap { $0 }
             .map { [self] in $0.count > 0 && !emailCheckList.allSatisfy($0.contains)}
-            .eraseToAnyPublisher()
+            .asObservable()
         
         let buttonStatePublisher = input.emailTextInput
             .compactMap { $0 }
             .map { [self] in emailCheckList.allSatisfy($0.contains)}
-            .eraseToAnyPublisher()
+            .asObservable()
         
         return Output(emailTextInvalid: emailTextStatePublisher, continueButtonIsValid: buttonStatePublisher)
     }

@@ -7,11 +7,10 @@
 
 import UIKit
 import SnapKit
-import Combine
-import CombineCocoa
+import RxSwift
+import RxCocoa
 
 final class SignInViewController: UIViewController {
-    private let cancellables = Set<AnyCancellable>()
     var viewModel: SignInViewModel?
     
     private var logoImageView: UIImageView = {
@@ -31,6 +30,13 @@ final class SignInViewController: UIViewController {
     private let signInKakaoButton: SignInButtonView = SignInButtonView(signInType: .kakao)
     private let signInAppleButton: SignInButtonView = SignInButtonView(signInType: .apple)
     private let signInEmailButton: SignInButtonView = SignInButtonView(signInType: .email)
+    private let button: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "kakaoImage"), for: .normal)
+        button.setTitle("gg", for: .normal)
+        button.moveImageLeftTextCenter()
+        return button
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -49,7 +55,8 @@ final class SignInViewController: UIViewController {
         
         [signInKakaoButton,
          signInAppleButton,
-         signInEmailButton]
+         signInEmailButton,
+         button]
             .forEach({ stackView.addArrangedSubview($0) })
         
         
@@ -87,17 +94,22 @@ final class SignInViewController: UIViewController {
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(48.0)
         })
+        
+        button.snp.makeConstraints({
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(48.0)
+        })
 //
         
     }
     
     // MARK: viewModel bind
     private func bind() {
-        let input = SignInViewModel
-            .Input(kakaoSignInButtonTapped: signInKakaoButton.gesture(.tap()),
-                   appleSignInButtonTapped: signInAppleButton.gesture(.tap()),
-                   emailSignInButtonTapped: signInEmailButton.gesture(.tap()))
-        let output = viewModel?.transform(from: input)
+//        let input = SignInViewModel
+//            .Input(kakaoSignInButtonTapped: signInKakaoButton.rx.tapG,
+//                   appleSignInButtonTapped: signInAppleButton.gesture(.tap()),
+//                   emailSignInButtonTapped: signInEmailButton.gesture(.tap()))
+//        let output = viewModel?.transform(from: input)
         
     }
 }

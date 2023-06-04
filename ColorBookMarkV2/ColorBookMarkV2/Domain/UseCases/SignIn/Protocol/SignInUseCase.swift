@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import Combine
+import RxSwift
 
 protocol SignInUseCase {
-    var isRegistered: PassthroughSubject<Bool, Never> { get set }
+    var isRegistered: PublishSubject<Bool> { get set }
     func checkMemberWithKakao(key: String)
     func checkMemberWithApple(key: String)
 }

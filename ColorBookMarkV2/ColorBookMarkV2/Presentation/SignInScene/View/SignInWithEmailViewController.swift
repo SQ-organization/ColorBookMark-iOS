@@ -7,9 +7,9 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 import Combine
-import CombineCocoa
-
 final class SignInWithEmailViewController: UIViewController {
     private var cancellables = Set<AnyCancellable>()
     var viewModel: SignInWithEmailViewModel?
@@ -164,33 +164,33 @@ final class SignInWithEmailViewController: UIViewController {
     }
     
     private func bind() {
-        let input = SignInWithEmailViewModel
-            .Input(emailTextInput: self.emailTextfield.textPublisher,
-                   continueButtonTapped: continueButton.tapPublisher)
-        let output = viewModel?.transform(from: input)
-        
-        output?
-            .continueButtonIsValid
-            .sink(receiveValue: { [weak self] state in
-                self?.continueButton.isEnabled = state
-                self?.continueButton.setTitleColor(state ? .light_G00 : .veryLightPink, for: .normal)
-                self?.continueButton.backgroundColor = state ? .light_B01 : .light_G02
-            })
-            .store(in: &cancellables)
-        
-        output?
-            .emailTextInvalid
-            .sink(receiveValue: { [weak self] state in
-                if state {      // email state invalid
-                    self?.emailWarningLabel.isHidden = false
-                    self?.emailTextfield.setUnderline(color: .light_Error!)
-                }
-                else {          // email state valid
-                    self?.emailWarningLabel.isHidden = true
-                    self?.emailTextfield.setUnderline(color: .light_B01!)
-                    
-                }
-            })
-            .store(in: &cancellables)
+//        let input = SignInWithEmailViewModel
+//            .Input(emailTextInput: self.emailTextfield.textPublisher,
+//                   continueButtonTapped: continueButton.tapPublisher)
+//        let output = viewModel?.transform(from: input)
+//
+//        output?
+//            .continueButtonIsValid
+//            .sink(receiveValue: { [weak self] state in
+//                self?.continueButton.isEnabled = state
+//                self?.continueButton.setTitleColor(state ? .light_G00 : .veryLightPink, for: .normal)
+//                self?.continueButton.backgroundColor = state ? .light_B01 : .light_G02
+//            })
+//            .store(in: &cancellables)
+//
+//        output?
+//            .emailTextInvalid
+//            .sink(receiveValue: { [weak self] state in
+//                if state {      // email state invalid
+//                    self?.emailWarningLabel.isHidden = false
+//                    self?.emailTextfield.setUnderline(color: .light_Error!)
+//                }
+//                else {          // email state valid
+//                    self?.emailWarningLabel.isHidden = true
+//                    self?.emailTextfield.setUnderline(color: .light_B01!)
+//
+//                }
+//            })
+//            .store(in: &cancellables)
     }
 }
