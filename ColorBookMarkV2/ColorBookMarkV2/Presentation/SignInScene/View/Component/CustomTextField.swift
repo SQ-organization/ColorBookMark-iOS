@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import RxSwift
 
-final class CustomTextField: UIView {
+final class CustomTextField: UIStackView {
     var textFieldStateSubject = PublishSubject<TextFieldState>()
     private var textFieldState: TextFieldState = .empty
     private var disposeBag = DisposeBag()
@@ -23,36 +23,37 @@ final class CustomTextField: UIView {
         return textField
     }()
     
-    private let stateBar: UIView = UIView()
-    
-    private let errorLabel: UILabel = UILabel()
+    private let errorLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        return label
+    }()
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupLayout()
         bind()
     }
     
-    required init?(coder: NSCoder) {
+    required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+
     private func setupLayout() {
+        self.axis = .vertical
+        self.distribution = .equalSpacing
+        self.spacing = 6.0
         [textField,
-        stateBar,
         errorLabel]
-            .forEach({ addSubview($0) })
+            .forEach({ addArrangedSubview($0) })
         
         textField.snp.makeConstraints({
             $0.horizontalEdges.equalToSuperview()
-        })
-        
-        stateBar.snp.makeConstraints({
-            $0.top.equalTo(textField.snp.bottom).inset(3.0)
-            $0.horizontalEdges.equalTo(textField)
-            $0.height.equalTo(3.0)
+            $0.height.equalTo(48.0)
         })
         
         errorLabel.snp.makeConstraints({
+            $0.horizontalEdges.equalToSuperview()
             $0.centerX.equalToSuperview()
             $0.top.equalTo(textField.snp.bottom).offset(6.0)
         })

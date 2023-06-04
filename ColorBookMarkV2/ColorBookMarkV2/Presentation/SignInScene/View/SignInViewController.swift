@@ -51,13 +51,13 @@ final class SignInViewController: UIViewController {
         stackView.distribution = .equalSpacing
         [logoImageView,
          welcomeLabel,
-         stackView]
+         stackView,
+         textField]
             .forEach({ view.addSubview($0) })
         
         [signInKakaoButton,
          signInAppleButton,
-         signInEmailButton,
-        textField]
+         signInEmailButton]
             .forEach({ stackView.addArrangedSubview($0) })
         
         
@@ -98,7 +98,7 @@ final class SignInViewController: UIViewController {
         
         textField.snp.makeConstraints({
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(48.0)
+            $0.top.equalTo(welcomeLabel.snp.bottom).offset(10.0)
         })
     }
     
