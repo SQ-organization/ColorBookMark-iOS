@@ -8,21 +8,8 @@
 import UIKit
 import SnapKit
 
-final class SignInButtonView: UIView {
+final class SignInButton: UIButton {
     private var signInType: SignInType
-    private lazy var imageView: UIImageView = {
-        let imageView = UIImageView(image: signInType.image)
-        return imageView
-    }()
-
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = signInType.title
-        label.font = .systemFont(ofSize: 17.0, weight: .medium)
-        label.textColor = signInType.textColor
-        label.textAlignment = .center
-        return label
-    }()
 
     init(signInType: SignInType) {
         self.signInType = signInType
@@ -35,26 +22,21 @@ final class SignInButtonView: UIView {
     }
 
     private func setupUI() {
-        [imageView,
-        titleLabel]
-            .forEach({self.addSubview($0)})
-        self.contentMode = .center
         self.backgroundColor = signInType.backgroundColor
         if signInType == .apple {
             self.layer.borderColor = UIColor.light_B03?.cgColor
             self.layer.borderWidth = 1.0
         }
         self.layer.cornerRadius = 5.0
-        imageView.snp.makeConstraints({
-            $0.height.equalTo(37.0)
-            $0.width.equalTo(imageView.snp.height)
-            $0.leading.equalToSuperview().inset(10.0)
-            $0.centerY.equalToSuperview()
-        })
-
-        titleLabel.snp.makeConstraints({
-            $0.edges.equalToSuperview()
-        })
+        self.setImage(signInType.image, for: .normal)
+        self.setTitle(signInType.title, for: .normal)
+        self.setTitleColor(signInType.textColor, for: .normal)
+        self.titleLabel?.textAlignment = .center
+        self.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .medium)
+        let length = self.titleLabel?.frame.width
+        let lengthToMove = (UIScreen.main.bounds.width - (length ?? 0.0)) / 2.0 - 10.0
+        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -lengthToMove, bottom: 0, right: 0)
+        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 44)
     }
 }
 

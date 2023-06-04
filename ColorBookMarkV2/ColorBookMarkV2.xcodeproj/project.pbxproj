@@ -39,8 +39,8 @@
 		A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF982A1080D1007DFCEF /* AppCoordinator.swift */; };
 		A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */; };
 		A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */; };
-		A436DFA52A17B6CB007DFCEF /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFA42A17B6CB007DFCEF /* SignInButtonView.swift */; };
-		A436DFA62A17B6CB007DFCEF /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFA42A17B6CB007DFCEF /* SignInButtonView.swift */; };
+		A436DFA52A17B6CB007DFCEF /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFA42A17B6CB007DFCEF /* SignInButton.swift */; };
+		A436DFA62A17B6CB007DFCEF /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFA42A17B6CB007DFCEF /* SignInButton.swift */; };
 		A436DFA82A184337007DFCEF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFA72A184337007DFCEF /* UIColorExtension.swift */; };
 		A436DFA92A184337007DFCEF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFA72A184337007DFCEF /* UIColorExtension.swift */; };
 		A436DFB22A184E3B007DFCEF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */; };
@@ -119,7 +119,7 @@
 		A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignInRepository.swift; sourceTree = "<group>"; };
 		A436DF982A1080D1007DFCEF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A436DF9B2A108D15007DFCEF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		A436DFA42A17B6CB007DFCEF /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
+		A436DFA42A17B6CB007DFCEF /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		A436DFA72A184337007DFCEF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A436DFB42A185AB9007DFCEF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 		A436DFA32A17B6B3007DFCEF /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A436DFA42A17B6CB007DFCEF /* SignInButtonView.swift */,
+				A436DFA42A17B6CB007DFCEF /* SignInButton.swift */,
 				A436DFB42A185AB9007DFCEF /* CustomTextField.swift */,
 			);
 			path = Component;
@@ -662,7 +662,7 @@
 				E950E1642A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */,
-				A436DFA52A17B6CB007DFCEF /* SignInButtonView.swift in Sources */,
+				A436DFA52A17B6CB007DFCEF /* SignInButton.swift in Sources */,
 				A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A436DF892A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */,
@@ -713,7 +713,7 @@
 				E950E1652A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */,
-				A436DFA62A17B6CB007DFCEF /* SignInButtonView.swift in Sources */,
+				A436DFA62A17B6CB007DFCEF /* SignInButton.swift in Sources */,
 				A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A436DF8A2A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A4CC5FD929EB8FF800C0C9F6 /* AppDelegate.swift in Sources */,

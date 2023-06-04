@@ -27,16 +27,10 @@ final class SignInViewController: UIViewController {
         return label
     }()
     private let stackView: UIStackView = UIStackView()
-    private let signInKakaoButton: SignInButtonView = SignInButtonView(signInType: .kakao)
-    private let signInAppleButton: SignInButtonView = SignInButtonView(signInType: .apple)
-    private let signInEmailButton: SignInButtonView = SignInButtonView(signInType: .email)
-    private let button: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "kakaoImage"), for: .normal)
-        button.setTitle("gg", for: .normal)
-        button.moveImageLeftTextCenter()
-        return button
-    }()
+    private let signInKakaoButton: SignInButton = SignInButton(signInType: .kakao)
+    private let signInAppleButton: SignInButton = SignInButton(signInType: .apple)
+    private let signInEmailButton: SignInButton = SignInButton(signInType: .email)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -55,8 +49,7 @@ final class SignInViewController: UIViewController {
         
         [signInKakaoButton,
          signInAppleButton,
-         signInEmailButton,
-         button]
+         signInEmailButton]
             .forEach({ stackView.addArrangedSubview($0) })
         
         
@@ -94,13 +87,6 @@ final class SignInViewController: UIViewController {
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(48.0)
         })
-        
-        button.snp.makeConstraints({
-            $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(48.0)
-        })
-//
-        
     }
     
     // MARK: viewModel bind
