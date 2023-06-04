@@ -12,7 +12,6 @@ final class SignInViewModel {
     private let disposeBag = DisposeBag()
     private let coordinator: SignInCoordinatorDependencies
     private let useCase: SignInUseCase
-    private var textFieldInput: String = ""
     
     init(coordinator: SignInCoordinatorDependencies, signInUseCase: SignInUseCase) {
         self.coordinator = coordinator
@@ -23,8 +22,6 @@ final class SignInViewModel {
         var kakaoSignInButtonTapped: Observable<Void>
         var appleSignInButtonTapped: Observable<Void>
         var emailSignInButtonTapped: Observable<Void>
-        var textFieldInput: Observable<String>
-        var textFieldInputText: String = ""
         
         // email text 입력 완료 버튼 탭
         // 계속하기 버튼 탭
@@ -45,19 +42,9 @@ final class SignInViewModel {
             })
             .disposed(by: disposeBag)
         
-        input.textFieldInput
-            .subscribe(onNext: { [weak self] in
-                self?.textFieldInput = $0
-            })
-            .disposed(by: disposeBag)
-        
         input.appleSignInButtonTapped
             .subscribe (onNext: {  [weak self] in
-                if self?.textFieldInput.count ?? 0 > 5 {
-                    output.textFieldOutput.onNext(.done(message: ""))
-                } else {
-                    output.textFieldOutput.onNext(.error(message: "15자"))
-                }
+              
             })
             .disposed(by: disposeBag)
         

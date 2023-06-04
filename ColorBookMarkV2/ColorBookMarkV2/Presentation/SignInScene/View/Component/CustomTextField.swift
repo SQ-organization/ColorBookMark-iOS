@@ -81,17 +81,13 @@ final class CustomTextField: UIStackView {
     private func changeStatusBar(state: TextFieldState) {
         switch state {
         case .empty:
-            self.stateBar.backgroundColor = .clear
             self.errorLabel.text = ""
         case .typing:
-            self.stateBar.backgroundColor = .black
             self.errorLabel.text = ""
         case .error(message: let message):
-            self.stateBar.backgroundColor = .red
             self.errorLabel.text = message
             self.errorLabel.textColor = .black
         case .done(message: let message):
-            self.stateBar.backgroundColor = .black
             self.errorLabel.text = message
             self.errorLabel.textColor = .black
         }

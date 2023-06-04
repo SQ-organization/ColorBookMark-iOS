@@ -31,12 +31,6 @@ final class SignInViewController: UIViewController {
     private let signInKakaoButton: SignInButton = SignInButton(signInType: .kakao)
     private let signInAppleButton: SignInButton = SignInButton(signInType: .apple)
     private let signInEmailButton: SignInButton = SignInButton(signInType: .email)
-    private let textField: CustomTextField = {
-        let textField = CustomTextField()
-        textField.setReturnKey(.done)
-        textField.setPlaceHolder(StringConstant.emailPlaceholder)
-        return textField
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +45,7 @@ final class SignInViewController: UIViewController {
         stackView.distribution = .equalSpacing
         [logoImageView,
          welcomeLabel,
-         stackView,
-         textField]
+         stackView]
             .forEach({ view.addSubview($0) })
         
         [signInKakaoButton,
@@ -95,11 +88,6 @@ final class SignInViewController: UIViewController {
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(48.0)
         })
-        
-        textField.snp.makeConstraints({
-            $0.horizontalEdges.equalToSuperview()
-            $0.top.equalTo(welcomeLabel.snp.bottom).offset(10.0)
-        })
     }
     
     // MARK: viewModel bind
@@ -107,15 +95,8 @@ final class SignInViewController: UIViewController {
         let input = SignInViewModel
             .Input(kakaoSignInButtonTapped: signInKakaoButton.rx.tap.asObservable(),
                    appleSignInButtonTapped: signInAppleButton.rx.tap.asObservable(),
-                   emailSignInButtonTapped: signInEmailButton.rx.tap.asObservable(),
-                   textFieldInput: textField.textPublisher())
+                   emailSignInButtonTapped: signInEmailButton.rx.tap.asObservable())
         let output = viewModel?.transform(from: input)
-            
-        output?.textFieldOutput
-            .subscribe(onNext: { [weak self] in
-                self?.textField.textFieldStateSubject.onNext($0)
-            })
-            .disposed(by: disposeBag)
         
     }
 }
