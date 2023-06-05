@@ -51,12 +51,13 @@ final class SignInWithEmailViewModel {
         let output = Output(emailTextValid: emailTextStatePublisher, continueButtonIsValid: buttonStatePublisher)
         
         input.continueButtonTapped
-            .subscribe (onNext: {  [self] in
+            .subscribe (onNext: { [self] in
                 if isValidEmail(emailText: emailTextInput) {
                     output.emailTextFieldOutput.onNext(.done(message: " "))
+                    self.coordinator.moveToSignUpScene()
                 }
                 else {
-                    output.emailTextFieldOutput.onNext(.error(message: "올바른 이메일 형식으로  입력해주세요!"))
+                    output.emailTextFieldOutput.onNext(.error(message: StringConstant.emailError))
                 }
             })
             .disposed(by: disposeBag)
@@ -64,7 +65,7 @@ final class SignInWithEmailViewModel {
         return output
     }
     
-    func isValidEmail(emailText:String) -> Bool {
+    func isValidEmail(emailText: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailText)

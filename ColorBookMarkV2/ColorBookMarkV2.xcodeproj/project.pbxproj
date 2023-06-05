@@ -84,6 +84,14 @@
 		E950E1672A1B5E060037E0B2 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */; };
 		E950E17C2A1F3A3A0037E0B2 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */; };
 		E950E17D2A1F3D290037E0B2 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */; };
+		E9C4C06B2A2DBF2C00EB32AE /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C06A2A2DBF2C00EB32AE /* SignUpCoordinator.swift */; };
+		E9C4C06C2A2DBF2C00EB32AE /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C06A2A2DBF2C00EB32AE /* SignUpCoordinator.swift */; };
+		E9C4C06E2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C06D2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift */; };
+		E9C4C06F2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C06D2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift */; };
+		E9C4C0712A2DC03800EB32AE /* SignUpWithPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C0702A2DC03800EB32AE /* SignUpWithPasswordViewController.swift */; };
+		E9C4C0722A2DC03800EB32AE /* SignUpWithPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C0702A2DC03800EB32AE /* SignUpWithPasswordViewController.swift */; };
+		E9C4C0742A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C0732A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift */; };
+		E9C4C0752A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C0732A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +151,10 @@
 		E950E15E2A1B5DA30037E0B2 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		E9C4C06A2A2DBF2C00EB32AE /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		E9C4C06D2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinatorDependencies.swift; sourceTree = "<group>"; };
+		E9C4C0702A2DC03800EB32AE /* SignUpWithPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithPasswordViewController.swift; sourceTree = "<group>"; };
+		E9C4C0732A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithPasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +219,7 @@
 		A436DF6829F4CDCB007DFCEF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E9C4C0662A2DBD0300EB32AE /* SignUpScene */,
 				A436DF7D29FE1D66007DFCEF /* Common */,
 				A436DF6A29F4CEF5007DFCEF /* SignInScene */,
 			);
@@ -260,8 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				A436DFA32A17B6B3007DFCEF /* Component */,
-				A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */,
 				A436DF7629F4E81D007DFCEF /* SignInViewController.swift */,
+				A436DF6E29F4DC52007DFCEF /* SignInWithEmailViewController.swift */,
+				E9C4C0702A2DC03800EB32AE /* SignUpWithPasswordViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +285,7 @@
 			children = (
 				A436DF7329F4DE5F007DFCEF /* SignInViewModel.swift */,
 				E950E1552A1B382C0037E0B2 /* SignInWithEmailViewModel.swift */,
+				E9C4C0732A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,6 +295,7 @@
 			children = (
 				A436DF842A077F76007DFCEF /* Protocol */,
 				A436DF882A07802B007DFCEF /* SignInCoordinator.swift */,
+				E9C4C06A2A2DBF2C00EB32AE /* SignUpCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -313,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				A436DF852A077FA8007DFCEF /* SignInCoordinatorDependencies.swift */,
+				E9C4C06D2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -462,6 +479,37 @@
 				E950E1592A1B5D930037E0B2 /* Pretendard-Medium.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E9C4C0662A2DBD0300EB32AE /* SignUpScene */ = {
+			isa = PBXGroup;
+			children = (
+				E9C4C0672A2DBD2300EB32AE /* Coordinator */,
+				E9C4C0682A2DBD2E00EB32AE /* ViewModel */,
+				E9C4C0692A2DBD3600EB32AE /* View */,
+			);
+			path = SignUpScene;
+			sourceTree = "<group>";
+		};
+		E9C4C0672A2DBD2300EB32AE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E9C4C0682A2DBD2E00EB32AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9C4C0692A2DBD3600EB32AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -649,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */,
+				E9C4C0712A2DC03800EB32AE /* SignUpWithPasswordViewController.swift in Sources */,
 				A436DF7A29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
@@ -660,14 +709,17 @@
 				E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				E950E1642A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
+				E9C4C06B2A2DBF2C00EB32AE /* SignUpCoordinator.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */,
 				A436DFA52A17B6CB007DFCEF /* SignInButton.swift in Sources */,
 				A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A436DF892A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */,
+				E9C4C06E2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift in Sources */,
 				A436DF862A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
 				A436DF8D2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
+				E9C4C0742A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift in Sources */,
 				A436DFB22A184E3B007DFCEF /* UIViewExtension.swift in Sources */,
 				A436DFB52A185AB9007DFCEF /* CustomTextField.swift in Sources */,
 				A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */,
@@ -700,6 +752,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */,
+				E9C4C0722A2DC03800EB32AE /* SignUpWithPasswordViewController.swift in Sources */,
 				A436DF7B29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
@@ -711,14 +764,17 @@
 				E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				E950E1652A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
+				E9C4C06C2A2DBF2C00EB32AE /* SignUpCoordinator.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */,
 				A436DFA62A17B6CB007DFCEF /* SignInButton.swift in Sources */,
 				A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A436DF8A2A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A4CC5FD929EB8FF800C0C9F6 /* AppDelegate.swift in Sources */,
+				E9C4C06F2A2DBF8E00EB32AE /* SignUpCoordinatorDependencies.swift in Sources */,
 				A436DF872A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
 				A436DF8E2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
+				E9C4C0752A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift in Sources */,
 				A436DFB32A184E3B007DFCEF /* UIViewExtension.swift in Sources */,
 				A436DFB62A185AB9007DFCEF /* CustomTextField.swift in Sources */,
 				A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */,

@@ -29,5 +29,6 @@ extension UIColor {
     static let sub_error = UIColor(named: "sub_error")
     static let txt_component = UIColor(named: "txt_component")
     static let txt_disabled = UIColor(named: "txt_disabled")
+    static let txt_secondary = UIColor(named: "txt_secondary")
     
 }

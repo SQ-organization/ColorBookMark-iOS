@@ -17,7 +17,7 @@ final class CustomTextField: UIStackView {
     private let textField: UITextField = {
         let textField = UITextField()
         textField.textAlignment = .center
-        textField.layer.cornerRadius = 5
+        textField.layer.cornerRadius = 4
         textField.layer.borderColor = UIColor.light_G05?.cgColor
         textField.layer.borderWidth = 1
         return textField
@@ -116,6 +116,10 @@ extension CustomTextField {
     
     func textPublisher() -> Observable<String> {
         return textField.rx.text.orEmpty.asObservable()
+    }
+    
+    func enableTextfieldUserInteraction(_ state: Bool) {
+        textField.isUserInteractionEnabled = state
     }
 //    
 //    func textControlPublisher(_ control: UIControl.Event) -> AnyPublisher<Void, Never> {
