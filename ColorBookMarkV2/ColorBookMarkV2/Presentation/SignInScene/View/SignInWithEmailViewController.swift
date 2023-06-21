@@ -9,9 +9,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
-import Combine
 final class SignInWithEmailViewController: UIViewController {
-    private var cancellables = Set<AnyCancellable>()
     var viewModel: SignInWithEmailViewModel?
     
     private var emailTitleLabel: UILabel = {

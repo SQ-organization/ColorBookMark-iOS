@@ -44,7 +44,7 @@ final class SignInViewModel {
         
         input.appleSignInButtonTapped
             .subscribe (onNext: {  [weak self] in
-              
+                self?.coordinator.showPopup()
             })
             .disposed(by: disposeBag)
         

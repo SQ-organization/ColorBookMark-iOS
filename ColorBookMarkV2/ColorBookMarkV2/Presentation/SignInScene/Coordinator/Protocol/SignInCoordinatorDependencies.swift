@@ -10,4 +10,5 @@ import Foundation
 protocol SignInCoordinatorDependencies: Coordinator {
     func moveToHome()
     func pushEmailInputViewController()
+    func showPopup()
 }

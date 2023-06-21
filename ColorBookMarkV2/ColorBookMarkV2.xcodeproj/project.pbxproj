@@ -53,6 +53,8 @@
 		A47F89CE2A2C208700166AE7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89CD2A2C208700166AE7 /* RxCocoa */; };
 		A47F89D02A2C208700166AE7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89CF2A2C208700166AE7 /* RxRelay */; };
 		A47F89D22A2C208700166AE7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89D12A2C208700166AE7 /* RxSwift */; };
+		A47F89D52A39163000166AE7 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89D42A39163000166AE7 /* PopupViewController.swift */; };
+		A47F89D62A43302100166AE7 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89D42A39163000166AE7 /* PopupViewController.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -123,6 +125,7 @@
 		A436DFA72A184337007DFCEF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A436DFB42A185AB9007DFCEF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A47F89D42A39163000166AE7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 		A436DF6829F4CDCB007DFCEF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A47F89D32A39162000166AE7 /* Components */,
 				A436DF7D29FE1D66007DFCEF /* Common */,
 				A436DF6A29F4CEF5007DFCEF /* SignInScene */,
 			);
@@ -358,6 +362,14 @@
 				A436DFB42A185AB9007DFCEF /* CustomTextField.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		A47F89D32A39162000166AE7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A47F89D42A39163000166AE7 /* PopupViewController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A4CC5F9629EB8FE200C0C9F6 = {
@@ -673,6 +685,7 @@
 				A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */,
 				A436DF6F29F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
 				A436DF922A07861E007DFCEF /* SignInRepository.swift in Sources */,
+				A47F89D52A39163000166AE7 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +737,7 @@
 				A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */,
 				A436DF7029F4DC52007DFCEF /* SignInWithEmailViewController.swift in Sources */,
 				A436DF932A07861E007DFCEF /* SignInRepository.swift in Sources */,
+				A47F89D62A43302100166AE7 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,4 +36,8 @@ final class SignInCoordinator: SignInCoordinatorDependencies {
                                                                                 signInUseCase: DefaultSignInUseCase(repository: DefaultSignInRepository()))
         self.navigationController.viewControllers = [signInWithEmailViewController]
     }
+    
+    func showPopup() {
+        self.navigationController.showPopUp(title: "야야", subTitleInfo: "dididfdsfadsf", leftButtonText: "ggg", rightButtonText: "야야", rightButtonTapped: { print("gg")})
+    }
 }
