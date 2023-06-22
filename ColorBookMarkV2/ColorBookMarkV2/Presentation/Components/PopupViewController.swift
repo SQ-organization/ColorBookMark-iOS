@@ -105,6 +105,22 @@ final class PopupViewController: UIViewController {
         setupLayout()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.2, delay: 0.0) { [weak self] in
+            self?.containerView.transform = .identity
+            self?.containerView.isHidden = false
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIView.animate(withDuration: 0.2, delay: 0.0) { [weak self] in
+            self?.containerView.transform = .identity
+            self?.containerView.isHidden = true
+        }
+    }
+    
     private func setupLayout() {
         view.backgroundColor = .black.withAlphaComponent(0.3)
         view.addSubview(containerView)
