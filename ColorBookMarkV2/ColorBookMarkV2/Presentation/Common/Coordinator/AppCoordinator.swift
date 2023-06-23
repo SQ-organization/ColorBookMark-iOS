@@ -17,7 +17,7 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let coordinator = SignInCoordinator(navigationController)
+        let coordinator = MainTabbarCoordinator(navigationController)
         coordinator.start()
     }
     
