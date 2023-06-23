@@ -67,6 +67,12 @@
 		A47F89F02A45DF7E00166AE7 /* CaledarTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89EE2A45DF7E00166AE7 /* CaledarTabCoordinator.swift */; };
 		A47F89F32A45DFE700166AE7 /* CaledarTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89F22A45DFE700166AE7 /* CaledarTabViewController.swift */; };
 		A47F89F42A45DFE700166AE7 /* CaledarTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89F22A45DFE700166AE7 /* CaledarTabViewController.swift */; };
+		A47F89F62A45E4D700166AE7 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89F52A45E4D700166AE7 /* CALayerExtension.swift */; };
+		A47F89F72A45E4D700166AE7 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89F52A45E4D700166AE7 /* CALayerExtension.swift */; };
+		A47F89F92A45E51D00166AE7 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89F82A45E51D00166AE7 /* UITabBarExtension.swift */; };
+		A47F89FA2A45E51D00166AE7 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89F82A45E51D00166AE7 /* UITabBarExtension.swift */; };
+		A47F89FC2A464DDE00166AE7 /* BaseTaBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89FB2A464DDE00166AE7 /* BaseTaBarController.swift */; };
+		A47F89FD2A464DDE00166AE7 /* BaseTaBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F89FB2A464DDE00166AE7 /* BaseTaBarController.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -144,6 +150,9 @@
 		A47F89EB2A45DF4900166AE7 /* CalendarTabCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabCoordinatorDependencies.swift; sourceTree = "<group>"; };
 		A47F89EE2A45DF7E00166AE7 /* CaledarTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaledarTabCoordinator.swift; sourceTree = "<group>"; };
 		A47F89F22A45DFE700166AE7 /* CaledarTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaledarTabViewController.swift; sourceTree = "<group>"; };
+		A47F89F52A45E4D700166AE7 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		A47F89F82A45E51D00166AE7 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
+		A47F89FB2A464DDE00166AE7 /* BaseTaBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTaBarController.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -390,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				A47F89D42A39163000166AE7 /* PopupViewController.swift */,
+				A47F89FB2A464DDE00166AE7 /* BaseTaBarController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -510,6 +520,8 @@
 				A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */,
 				E950E1632A1B5E060037E0B2 /* UIFontExtension.swift */,
 				E950E17B2A1F3A3A0037E0B2 /* UITextFieldExtension.swift */,
+				A47F89F52A45E4D700166AE7 /* CALayerExtension.swift */,
+				A47F89F82A45E51D00166AE7 /* UITabBarExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -725,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */,
+				A47F89F92A45E51D00166AE7 /* UITabBarExtension.swift in Sources */,
 				A436DF7A29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
@@ -737,6 +750,7 @@
 				E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				E950E1642A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
+				A47F89FC2A464DDE00166AE7 /* BaseTaBarController.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */,
 				A436DFA52A17B6CB007DFCEF /* SignInButton.swift in Sources */,
@@ -745,6 +759,7 @@
 				A47F89EF2A45DF7E00166AE7 /* CaledarTabCoordinator.swift in Sources */,
 				A436DF892A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A47F89EC2A45DF4900166AE7 /* CalendarTabCoordinatorDependencies.swift in Sources */,
+				A47F89F62A45E4D700166AE7 /* CALayerExtension.swift in Sources */,
 				A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */,
 				A436DF862A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
 				A47F89E12A45BEBD00166AE7 /* MainTabbarCoordinatorDependencies.swift in Sources */,
@@ -783,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */,
+				A47F89FA2A45E51D00166AE7 /* UITabBarExtension.swift in Sources */,
 				A436DF7B29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
@@ -795,6 +811,7 @@
 				E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				E950E1652A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
+				A47F89FD2A464DDE00166AE7 /* BaseTaBarController.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */,
 				A436DFA62A17B6CB007DFCEF /* SignInButton.swift in Sources */,
@@ -803,6 +820,7 @@
 				A47F89F02A45DF7E00166AE7 /* CaledarTabCoordinator.swift in Sources */,
 				A436DF8A2A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
 				A47F89ED2A45DF4900166AE7 /* CalendarTabCoordinatorDependencies.swift in Sources */,
+				A47F89F72A45E4D700166AE7 /* CALayerExtension.swift in Sources */,
 				A4CC5FD929EB8FF800C0C9F6 /* AppDelegate.swift in Sources */,
 				A436DF872A077FA8007DFCEF /* SignInCoordinatorDependencies.swift in Sources */,
 				A47F89E22A45BEBD00166AE7 /* MainTabbarCoordinatorDependencies.swift in Sources */,

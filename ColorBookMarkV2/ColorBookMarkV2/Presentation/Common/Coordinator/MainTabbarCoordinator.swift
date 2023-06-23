@@ -8,13 +8,13 @@
 import UIKit
 
 final class MainTabbarCoordinator: MainTabbarCoordinatorDependencies {
-    var tabBarController: UITabBarController
+    var tabBarController: BaseTaBarController
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.tabBarController = UITabBarController()
+        self.tabBarController = BaseTaBarController()
     }
     
     func start() {
@@ -38,6 +38,7 @@ final class MainTabbarCoordinator: MainTabbarCoordinatorDependencies {
     private func configureTabbarController(with controllers: [UIViewController]) {
         self.tabBarController.setViewControllers(controllers, animated: true)
         self.tabBarController.selectedIndex = MainTabbar.calendar.tabbarTag
+//        UITabBar.clearShadow()
         self.tabBarController.tabBar.backgroundColor = .white
         self.tabBarController.tabBar.tintColor = .black
         self.navigationController.pushViewController(tabBarController, animated: true)

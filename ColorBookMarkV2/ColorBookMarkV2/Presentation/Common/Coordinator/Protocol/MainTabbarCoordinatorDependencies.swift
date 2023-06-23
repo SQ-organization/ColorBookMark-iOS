@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MainTabbarCoordinatorDependencies: Coordinator {
-    var tabBarController: UITabBarController { get set }
+    var tabBarController: BaseTaBarController { get set }
     func selectTab(_ tab: MainTabbar)
     func setSelectedIndex(_ index: Int)
     func currentTab() -> MainTabbar?
