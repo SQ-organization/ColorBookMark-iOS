@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 final class SignInCoordinator: SignInCoordinatorDependencies {
-    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private var signInViewController: SignInViewController
@@ -22,8 +21,7 @@ final class SignInCoordinator: SignInCoordinatorDependencies {
     }
     
     func start() {
-        self.signInViewController.viewModel = SignInViewModel(coordinator: self,
-                                                              signInUseCase: DefaultSignInUseCase(repository: DefaultSignInRepository()))
+        self.signInViewController.viewModel = SignInViewModel(coordinator: self, signInUseCase: DefaultSignInUseCase(repository: DefaultSignInRepository()))
         self.navigationController.viewControllers = [signInViewController]
     }
     
@@ -32,12 +30,16 @@ final class SignInCoordinator: SignInCoordinatorDependencies {
     }
     
     func pushEmailInputViewController() {
-        self.signInWithEmailViewController.viewModel = SignInWithEmailViewModel(coordinator: self,
-                                                                                signInUseCase: DefaultSignInUseCase(repository: DefaultSignInRepository()))
+        self.signInWithEmailViewController.viewModel = SignInWithEmailViewModel(coordinator: self, signInUseCase: DefaultSignInUseCase(repository: DefaultSignInRepository()))
         self.navigationController.viewControllers = [signInWithEmailViewController]
     }
     
     func showPopup() {
         self.navigationController.showPopUp(title: "야야", subTitleInfo: "dididfdsfadsf", leftButtonText: "ggg", rightButtonText: "야야", rightButtonTapped: { print("gg")})
+    }
+        
+    func moveToSignUpScene() {
+        let coordinator = SignUpCoordinator(navigationController)
+        coordinator.start()
     }
 }

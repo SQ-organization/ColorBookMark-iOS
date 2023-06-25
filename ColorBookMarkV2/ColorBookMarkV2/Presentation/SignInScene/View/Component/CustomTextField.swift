@@ -17,7 +17,7 @@ final class CustomTextField: UIStackView {
     private let textField: UITextField = {
         let textField = UITextField()
         textField.textAlignment = .center
-        textField.layer.cornerRadius = 5
+        textField.layer.cornerRadius = 4
         textField.layer.borderColor = UIColor.light_G05?.cgColor
         textField.layer.borderWidth = 1
         return textField
@@ -25,9 +25,12 @@ final class CustomTextField: UIStackView {
     
     private let errorLabel: UILabel = {
         let label = UILabel()
+        label.font = .Pretendard(.medium, size: 12)
         label.textAlignment = .center
+        label.text = " "
         return label
     }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupLayout()
@@ -81,13 +84,16 @@ final class CustomTextField: UIStackView {
     private func changeStatusBar(state: TextFieldState) {
         switch state {
         case .empty:
-            self.errorLabel.text = ""
+            self.errorLabel.text = " "
         case .typing:
-            self.errorLabel.text = ""
+            textField.setUnderline(color: .component_primary!)
+            self.errorLabel.text = " "
         case .error(message: let message):
+            textField.setUnderline(color: .sub_error!)
             self.errorLabel.text = message
-            self.errorLabel.textColor = .black
+            self.errorLabel.textColor = .sub_error
         case .done(message: let message):
+            textField.setUnderline(color: .black)
             self.errorLabel.text = message
             self.errorLabel.textColor = .black
         }
@@ -110,6 +116,10 @@ extension CustomTextField {
     
     func textPublisher() -> Observable<String> {
         return textField.rx.text.orEmpty.asObservable()
+    }
+    
+    func enableTextfieldUserInteraction(_ state: Bool) {
+        textField.isUserInteractionEnabled = state
     }
 //    
 //    func textControlPublisher(_ control: UIControl.Event) -> AnyPublisher<Void, Never> {

@@ -11,4 +11,5 @@ protocol SignInCoordinatorDependencies: Coordinator {
     func moveToHome()
     func pushEmailInputViewController()
     func showPopup()
+    func moveToSignUpScene()
 }

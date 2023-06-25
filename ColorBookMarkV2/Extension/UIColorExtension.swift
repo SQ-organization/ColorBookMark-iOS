@@ -21,4 +21,14 @@ extension UIColor {
     static let light_G00 = UIColor(named: "Light_G00")
     static let light_Error = UIColor(named: "Light_Error")
     static let light_G05 = UIColor(named: "Light_G05")
+    
+    
+    
+    static let component_primary = UIColor(named: "component_primary")
+    static let component_disabled = UIColor(named: "component_disabled")
+    static let sub_error = UIColor(named: "sub_error")
+    static let txt_component = UIColor(named: "txt_component")
+    static let txt_disabled = UIColor(named: "txt_disabled")
+    static let txt_secondary = UIColor(named: "txt_secondary")
+    
 }

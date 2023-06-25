@@ -1,8 +1,8 @@
 //
-//  SignInWithEmailViewController.swift
+//  SignUpWithPasswordViewController.swift
 //  ColorBookMarkV2
 //
-//  Created by SUN on 2023/04/23.
+//  Created by 김지훈 on 2023/06/05.
 //
 
 import UIKit
@@ -10,13 +10,13 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-final class SignInWithEmailViewController: UIViewController {
+class SignUpWithPasswordViewController: UIViewController {
     private var disposeBag = DisposeBag()
-    var viewModel: SignInWithEmailViewModel?
+    var viewModel: SignUpWithPasswordViewModel?
     
-    private var emailTitleLabel: UILabel = {
+    private var signUpTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.startColorBookMark
+        label.text = StringConstant.startSignUp
         label.font = .Pretendard(.medium, size: 16)
         label.textColor = .txt_secondary
         label.textAlignment = .center
@@ -35,38 +35,38 @@ final class SignInWithEmailViewController: UIViewController {
         return imageView
     }()
     
-    private var enterEmailLabel: UILabel = {
+    private var enterPasswordLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.enterEmail
+        label.text = StringConstant.enterPassword
         label.font = .Pretendard(.bold, size: 24)
         label.textColor = .txt_secondary
         label.textAlignment = .center
         return label
     }()
     
-    private var emailHandlingLabel: UILabel = {
+    private var greetingLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.emailHandling
+        label.text = StringConstant.greeting
         label.font = .Pretendard(.medium, size: 16)
         label.textColor = .txt_secondary
         label.textAlignment = .center
         return label
     }()
     
-    private var emailTextfield: CustomTextField = {
+    private var passwordTextfield: CustomTextField = {
         let textField = CustomTextField()
         textField.setReturnKey(.done)
-        textField.setPlaceHolder(StringConstant.emailPlaceholder)
+        textField.setPlaceHolder(StringConstant.passwordPlaceholder_1)
+        textField.setSecureMode(true)
         return textField
     }()
     
-    private var emailNoticeLabel: UILabel = {
-        let label = UILabel()
-        label.text = StringConstant.emailNotice
-        label.font = .Pretendard(.bold, size: 12)
-        label.textColor = .txt_secondary
-        label.textAlignment = .center
-        return label
+    private var passwordVerifyTextfield: CustomTextField = {
+        let textField = CustomTextField()
+        textField.setReturnKey(.done)
+        textField.setPlaceHolder(StringConstant.passwordPlaceholder_2)
+        textField.setSecureMode(true)
+        return textField
     }()
     
     private var continueButton: UIButton = {
@@ -88,17 +88,17 @@ final class SignInWithEmailViewController: UIViewController {
     private func setupLayout() {
         view.backgroundColor = .systemBackground
         
-        [emailTitleLabel,
+        [signUpTitleLabel,
          cancelButton,
          logoImageView,
-         enterEmailLabel,
-         emailHandlingLabel,
-         emailTextfield,
-         emailNoticeLabel,
+         enterPasswordLabel,
+         greetingLabel,
+         passwordTextfield,
+         passwordVerifyTextfield,
          continueButton]
             .forEach({ view.addSubview($0) })
         
-        emailTitleLabel.snp.makeConstraints({
+        signUpTitleLabel.snp.makeConstraints({
             $0.top.equalToSuperview().inset(72.0)
             $0.horizontalEdges.equalToSuperview()
         })
@@ -108,34 +108,34 @@ final class SignInWithEmailViewController: UIViewController {
         })
         
         logoImageView.snp.makeConstraints({
-            $0.top.equalTo(emailTitleLabel.snp.bottom).offset(13.9)
+            $0.top.equalTo(signUpTitleLabel.snp.bottom).offset(13.9)
             $0.width.equalTo(120.0)
             $0.height.equalTo(96.4)
             $0.centerX.equalToSuperview()
         })
         
-        enterEmailLabel.snp.makeConstraints({
+        enterPasswordLabel.snp.makeConstraints({
             $0.top.equalTo(logoImageView.snp.bottom).offset(9.6)
             $0.horizontalEdges.equalToSuperview()
         })
         
-        emailHandlingLabel.snp.makeConstraints({
-            $0.top.equalTo(enterEmailLabel.snp.bottom).offset(7.0)
+        greetingLabel.snp.makeConstraints({
+            $0.top.equalTo(enterPasswordLabel.snp.bottom).offset(7.0)
             $0.horizontalEdges.equalToSuperview()
         })
         
-        emailTextfield.snp.makeConstraints({
-            $0.top.equalTo(emailHandlingLabel.snp.bottom).offset(23.0)
+        passwordTextfield.snp.makeConstraints({
+            $0.top.equalTo(greetingLabel.snp.bottom).offset(23.0)
             $0.horizontalEdges.equalToSuperview().inset(24.0)
         })
         
-        emailNoticeLabel.snp.makeConstraints({
-            $0.top.equalTo(emailTextfield.snp.bottom).offset(121.0)
-            $0.horizontalEdges.equalToSuperview()
+        passwordVerifyTextfield.snp.makeConstraints({
+            $0.top.equalTo(passwordTextfield.snp.bottom).offset(20.0)
+            $0.horizontalEdges.equalToSuperview().inset(24.0)
         })
         
         continueButton.snp.makeConstraints({
-            $0.top.equalTo(emailNoticeLabel.snp.bottom).offset(12.0)
+            $0.top.equalTo(passwordVerifyTextfield.snp.bottom).offset(40.0)
             $0.width.equalTo(380.0)
             $0.height.equalTo(45.0)
             $0.centerX.equalToSuperview()
@@ -143,25 +143,55 @@ final class SignInWithEmailViewController: UIViewController {
     }
     
     private func bind() {
-        let input = SignInWithEmailViewModel.Input(emailTextInput: emailTextfield.textPublisher(), continueButtonTapped: continueButton.rx.tap.asObservable())
+        let input = SignUpWithPasswordViewModel.Input(passwordTextInput: passwordTextfield.textPublisher(), passwordVerifyTextInput: passwordVerifyTextfield.textPublisher(), continueButtonTapped: continueButton.rx.tap.asObservable())
         let output = viewModel?.transform(from: input)
         
+        // 계속하기 버튼 활성화
         output?
             .continueButtonIsValid
             .subscribe(onNext: { state in
                 self.enableContinueButton(state: state)
             }).disposed(by: disposeBag)
         
+        // 비밀번호 확인 텍스트필드 활성화
         output?
-            .emailTextValid
-            .filter { !$0 }
+            .passwordTextFieldIsValid
             .subscribe(onNext: { state in
-                self.enableContinueButton(state: false)
+                self.passwordVerifyTextfield.enableTextfieldUserInteraction(state)
             }).disposed(by: disposeBag)
         
-        output?.emailTextFieldOutput
+        output?.passwordTextFieldOutput
             .subscribe(onNext: { [weak self] in
-                self?.emailTextfield.textFieldStateSubject.onNext($0)
+                self?.passwordTextfield.textFieldStateSubject.onNext($0)
+            })
+            .disposed(by: disposeBag)
+        
+        output?.passwordVerifyTextFieldOutput
+            .subscribe(onNext: { [weak self] in
+                self?.passwordVerifyTextfield.textFieldStateSubject.onNext($0)
+            })
+            .disposed(by: disposeBag)
+        
+        //MARK: bind / transform
+        output?.passwordTextFieldIsValid
+            .subscribe(onNext: { valid in
+                if valid {
+                    output?.passwordTextFieldOutput.onNext(.done(message: StringConstant.passwordDone))
+                }
+                else {
+                    output?.passwordTextFieldOutput.onNext(.done(message: " "))
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        output?.continueButtonIsValid
+            .subscribe (onNext: { valid in
+                if valid {
+                    output?.passwordVerifyTextFieldOutput.onNext(.done(message: StringConstant.passwordVerifyDone))
+                }
+                else {
+                    output?.passwordVerifyTextFieldOutput.onNext(.error(message: StringConstant.passwordError))
+                }
             })
             .disposed(by: disposeBag)
     }
