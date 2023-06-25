@@ -26,7 +26,8 @@ final class SignInCoordinator: SignInCoordinatorDependencies {
     }
     
     func moveToHome() {
-        
+        print("BACK")
+        self.navigationController.popViewController(animated: true)
     }
     
     func pushEmailInputViewController() {

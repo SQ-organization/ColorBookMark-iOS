@@ -23,9 +23,9 @@ class SignUpWithPasswordViewController: UIViewController {
         return label
     }()
     
-    private var cancelButton: UIButton = {
+    private var backButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "icClose"), for: .normal)
+        button.setImage(UIImage(named: "arrowBack"), for: .normal)
         return button
     }()
     
@@ -89,7 +89,7 @@ class SignUpWithPasswordViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         [signUpTitleLabel,
-         cancelButton,
+         backButton,
          logoImageView,
          enterPasswordLabel,
          greetingLabel,
@@ -103,7 +103,9 @@ class SignUpWithPasswordViewController: UIViewController {
             $0.horizontalEdges.equalToSuperview()
         })
         
-        cancelButton.snp.makeConstraints({
+        backButton.snp.makeConstraints({
+            $0.centerY.equalTo(signUpTitleLabel.snp.centerY)
+            $0.left.equalToSuperview().inset(24.0)
             $0.width.height.equalTo(44.0)
         })
         

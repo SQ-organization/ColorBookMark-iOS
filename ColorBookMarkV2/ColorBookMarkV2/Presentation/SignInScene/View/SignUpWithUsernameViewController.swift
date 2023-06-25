@@ -1,8 +1,8 @@
 //
-//  SignInWithEmailViewController.swift
+//  SignUpWithUsernameViewController.swift
 //  ColorBookMarkV2
 //
-//  Created by SUN on 2023/04/23.
+//  Created by 김지훈 on 2023/06/11.
 //
 
 import UIKit
@@ -10,23 +10,22 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-final class SignInWithEmailViewController: UIViewController {
+class SignUpWithUsernameViewController: UIViewController {
     private var disposeBag = DisposeBag()
-    var viewModel: SignInWithEmailViewModel?
+    var viewModel: SignUpWithUsernameViewModel?
     
-    private var emailTitleLabel: UILabel = {
+    private var signUpTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.startColorBookMark
+        label.text = StringConstant.startSignUp
         label.font = .Pretendard(.medium, size: 16)
         label.textColor = .txt_secondary
         label.textAlignment = .center
         return label
     }()
     
-    private var cancelButton: UIButton = {
+    private var backButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "icClose"), for: .normal)
-        button.isEnabled = true
+        button.setImage(UIImage(named: "arrowBack"), for: .normal)
         return button
     }()
     
@@ -36,34 +35,34 @@ final class SignInWithEmailViewController: UIViewController {
         return imageView
     }()
     
-    private var enterEmailLabel: UILabel = {
+    private var enterUsernameLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.enterEmail
+        label.text = StringConstant.enterUsername
         label.font = .Pretendard(.bold, size: 24)
         label.textColor = .txt_secondary
         label.textAlignment = .center
         return label
     }()
     
-    private var emailHandlingLabel: UILabel = {
+    private var finalLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.emailHandling
+        label.text = StringConstant.final
         label.font = .Pretendard(.medium, size: 16)
         label.textColor = .txt_secondary
         label.textAlignment = .center
         return label
     }()
     
-    private var emailTextfield: CustomTextField = {
+    private var usernameTextfield: CustomTextField = {
         let textField = CustomTextField()
         textField.setReturnKey(.done)
-        textField.setPlaceHolder(StringConstant.emailPlaceholder)
+        textField.setPlaceHolder(StringConstant.usernamePlaceholder)
         return textField
     }()
     
-    private var emailNoticeLabel: UILabel = {
+    private var usernameNoticeLabel: UILabel = {
         let label = UILabel()
-        label.text = StringConstant.emailNotice
+        label.text = StringConstant.usernameNotice
         label.font = .Pretendard(.bold, size: 12)
         label.textColor = .txt_secondary
         label.textAlignment = .center
@@ -89,56 +88,56 @@ final class SignInWithEmailViewController: UIViewController {
     private func setupLayout() {
         view.backgroundColor = .systemBackground
         
-        [emailTitleLabel,
-         cancelButton,
+        [signUpTitleLabel,
+         backButton,
          logoImageView,
-         enterEmailLabel,
-         emailHandlingLabel,
-         emailTextfield,
-         emailNoticeLabel,
+         enterUsernameLabel,
+         finalLabel,
+         usernameTextfield,
+         usernameNoticeLabel,
          continueButton]
             .forEach({ view.addSubview($0) })
         
-        emailTitleLabel.snp.makeConstraints({
+        signUpTitleLabel.snp.makeConstraints({
             $0.top.equalToSuperview().inset(72.0)
             $0.horizontalEdges.equalToSuperview()
         })
         
-        cancelButton.snp.makeConstraints({
-            $0.centerY.equalTo(emailTitleLabel.snp.centerY)
-            $0.right.equalToSuperview().inset(24.0)
+        backButton.snp.makeConstraints({
+            $0.centerY.equalTo(signUpTitleLabel.snp.centerY)
+            $0.left.equalToSuperview().inset(24.0)
             $0.width.height.equalTo(44.0)
         })
         
         logoImageView.snp.makeConstraints({
-            $0.top.equalTo(emailTitleLabel.snp.bottom).offset(13.9)
+            $0.top.equalTo(signUpTitleLabel.snp.bottom).offset(13.9)
             $0.width.equalTo(120.0)
             $0.height.equalTo(96.4)
             $0.centerX.equalToSuperview()
         })
         
-        enterEmailLabel.snp.makeConstraints({
+        enterUsernameLabel.snp.makeConstraints({
             $0.top.equalTo(logoImageView.snp.bottom).offset(9.6)
             $0.horizontalEdges.equalToSuperview()
         })
         
-        emailHandlingLabel.snp.makeConstraints({
-            $0.top.equalTo(enterEmailLabel.snp.bottom).offset(7.0)
+        finalLabel.snp.makeConstraints({
+            $0.top.equalTo(enterUsernameLabel.snp.bottom).offset(7.0)
             $0.horizontalEdges.equalToSuperview()
         })
         
-        emailTextfield.snp.makeConstraints({
-            $0.top.equalTo(emailHandlingLabel.snp.bottom).offset(23.0)
+        usernameTextfield.snp.makeConstraints({
+            $0.top.equalTo(finalLabel.snp.bottom).offset(23.0)
             $0.horizontalEdges.equalToSuperview().inset(24.0)
         })
         
-        emailNoticeLabel.snp.makeConstraints({
-            $0.top.equalTo(emailTextfield.snp.bottom).offset(121.0)
+        usernameNoticeLabel.snp.makeConstraints({
+            $0.top.equalTo(usernameTextfield.snp.bottom).offset(103.0)
             $0.horizontalEdges.equalToSuperview()
         })
         
         continueButton.snp.makeConstraints({
-            $0.top.equalTo(emailNoticeLabel.snp.bottom).offset(12.0)
+            $0.top.equalTo(usernameNoticeLabel.snp.bottom).offset(10.0)
             $0.width.equalTo(380.0)
             $0.height.equalTo(45.0)
             $0.centerX.equalToSuperview()
@@ -146,31 +145,24 @@ final class SignInWithEmailViewController: UIViewController {
     }
     
     private func bind() {
-        let input = SignInWithEmailViewModel
-            .Input(emailTextInput: emailTextfield.textPublisher(),
-              continueButtonTapped: continueButton.rx.tap.asObservable(),
-              cancelButtonTapped: cancelButton.rx.tap.asObservable())
+        let input = SignUpWithUsernameViewModel
+            .Input(usernameTextInput: usernameTextfield.textPublisher(),
+                   continueButtonTapped: continueButton.rx.tap.asObservable())
         let output = viewModel?.transform(from: input)
+        
+        output?.usernameTextFieldOutput
+            .subscribe(onNext: { [weak self] in
+                self?.usernameTextfield.textFieldStateSubject.onNext($0)
+            })
+            .disposed(by: disposeBag)
         
         output?
             .continueButtonIsValid
             .subscribe(onNext: { state in
                 self.enableContinueButton(state: state)
             }).disposed(by: disposeBag)
-        
-        output?
-            .emailTextValid
-            .filter { !$0 }
-            .subscribe(onNext: { state in
-                self.enableContinueButton(state: false)
-            }).disposed(by: disposeBag)
-        
-        output?.emailTextFieldOutput
-            .subscribe(onNext: { [weak self] in
-                self?.emailTextfield.textFieldStateSubject.onNext($0)
-            })
-            .disposed(by: disposeBag)
     }
+    
     
     func enableContinueButton(state: Bool) {
         continueButton.isEnabled = state

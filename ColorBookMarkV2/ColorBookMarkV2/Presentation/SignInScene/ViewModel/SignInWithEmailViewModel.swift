@@ -23,6 +23,7 @@ final class SignInWithEmailViewModel {
     struct Input {
         var emailTextInput: Observable<String>
         var continueButtonTapped: Observable<Void>
+        var cancelButtonTapped: Observable<Void>
     }
     
     struct Output {
@@ -35,6 +36,12 @@ final class SignInWithEmailViewModel {
         let emailValidState = input.emailTextInput
             .compactMap { $0 }
             .map { [self] in isValidEmail(emailText: $0)}
+        
+        input.cancelButtonTapped
+            .subscribe(onNext: { [self] in
+                self.coordinator.moveToHome()
+            })
+            .disposed(by: disposeBag)
         
         let emailTextStatePublisher = input.continueButtonTapped.withLatestFrom(emailValidState)
         

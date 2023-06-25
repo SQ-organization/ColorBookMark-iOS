@@ -43,6 +43,13 @@ final class SignUpWithPasswordViewModel {
                 return false
             }
         
+        //pushUsernameInputViewController
+        input.continueButtonTapped
+            .subscribe(onNext: { [weak self] _ in
+                self?.coordinator.pushUsernameInputViewController()
+            })
+            .disposed(by: disposeBag)
+        
         return Output(passwordTextFieldIsValid: passwordVerifyStatePublisher, continueButtonIsValid: continuePublisher)
     }
 }

@@ -36,4 +36,8 @@ struct StringConstant {
     static let passwordError: String = "두 비밀번호가 달라요!"
     static let passwordVerifyDone: String = "비밀번호가 일치합니다."
 
+    static let enterUsername: String = "제게 닉네임을 알려주세요!"
+    static let final: String = "이제 마지막!"
+    static let usernamePlaceholder: String = "여섯 글자 이하로 입력해주세요."
+    static let usernameNotice: String = "가입 시 개인정보처리방침 및 서비스이용약관에 동의하게 됩니다"
 }
