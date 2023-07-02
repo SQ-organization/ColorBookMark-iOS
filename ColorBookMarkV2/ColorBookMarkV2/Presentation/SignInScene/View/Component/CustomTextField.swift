@@ -18,7 +18,7 @@ final class CustomTextField: UIStackView {
         let textField = UITextField()
         textField.textAlignment = .center
         textField.layer.cornerRadius = 4
-        textField.layer.borderColor = UIColor.light_G05?.cgColor
+        textField.layer.borderColor = UIColor.component_disabled?.cgColor
         textField.layer.borderWidth = 1
         return textField
     }()

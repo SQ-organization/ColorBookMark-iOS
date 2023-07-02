@@ -24,7 +24,7 @@ final class SignInButton: UIButton {
     private func setupUI() {
         self.backgroundColor = signInType.backgroundColor
         if signInType == .apple {
-            self.layer.borderColor = UIColor.light_B03?.cgColor
+            self.layer.borderColor = UIColor.white.cgColor
             self.layer.borderWidth = 1.0
         }
         self.layer.cornerRadius = 5.0
@@ -48,7 +48,7 @@ enum SignInType {
     var textColor: UIColor? {
         switch self {
         case .kakao, .apple:
-            return .light_B02_Text
+            return .txt_primary
         case .email:
             return .white
         }
