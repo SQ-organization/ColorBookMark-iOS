@@ -79,6 +79,12 @@
 		A47F8A072A5121C400166AE7 /* APIClient+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A052A5121C400166AE7 /* APIClient+TargetType.swift */; };
 		A47F8A092A51220900166AE7 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A082A51220900166AE7 /* APIConstant.swift */; };
 		A47F8A0A2A51220900166AE7 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A082A51220900166AE7 /* APIConstant.swift */; };
+		A47F8A122A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A112A5F5D7800166AE7 /* CalendarCollectionViewCell.swift */; };
+		A47F8A132A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A112A5F5D7800166AE7 /* CalendarCollectionViewCell.swift */; };
+		A47F8A162A6A8B7E00166AE7 /* CalendarTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A152A6A8B7D00166AE7 /* CalendarTabViewModel.swift */; };
+		A47F8A172A6A8B7E00166AE7 /* CalendarTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A152A6A8B7D00166AE7 /* CalendarTabViewModel.swift */; };
+		A47F8A1B2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */; };
+		A47F8A1C2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -170,6 +176,9 @@
 		A47F8A022A51214600166AE7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A47F8A052A5121C400166AE7 /* APIClient+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+TargetType.swift"; sourceTree = "<group>"; };
 		A47F8A082A51220900166AE7 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		A47F8A112A5F5D7800166AE7 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		A47F8A152A6A8B7D00166AE7 /* CalendarTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabViewModel.swift; sourceTree = "<group>"; };
+		A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabUseCase.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -297,6 +306,7 @@
 		A436DF6C29F4CF7E007DFCEF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				A47F8A182A6A8BE500166AE7 /* CalendarTab */,
 				A436DF972A078755007DFCEF /* SignIn */,
 			);
 			path = UseCases;
@@ -441,6 +451,7 @@
 		A47F89D82A45BABF00166AE7 /* CalendarTabScene */ = {
 			isa = PBXGroup;
 			children = (
+				A47F8A142A6A8B6200166AE7 /* ViewModel */,
 				A47F89F12A45DFDC00166AE7 /* View */,
 				A47F89E92A45DF1100166AE7 /* Coordinator */,
 			);
@@ -468,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				A47F89F22A45DFE700166AE7 /* CaledarTabViewController.swift */,
+				A47F8A112A5F5D7800166AE7 /* CalendarCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +492,30 @@
 				A47F8A052A5121C400166AE7 /* APIClient+TargetType.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A47F8A142A6A8B6200166AE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A47F8A152A6A8B7D00166AE7 /* CalendarTabViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A47F8A182A6A8BE500166AE7 /* CalendarTab */ = {
+			isa = PBXGroup;
+			children = (
+				A47F8A192A6A8C0200166AE7 /* Protocol */,
+			);
+			path = CalendarTab;
+			sourceTree = "<group>";
+		};
+		A47F8A192A6A8C0200166AE7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		A4CC5F9629EB8FE200C0C9F6 = {
@@ -812,12 +848,14 @@
 				A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
+				A47F8A122A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */,
 				A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
 				A47F89E42A45C9BC00166AE7 /* MainTabbar.swift in Sources */,
 				E950E17C2A1F3A3A0037E0B2 /* UITextFieldExtension.swift in Sources */,
 				A436DFA82A184337007DFCEF /* UIColorExtension.swift in Sources */,
 				E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
+				A47F8A1B2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */,
 				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				E950E1642A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
 				A47F89FC2A464DDE00166AE7 /* BaseTaBarController.swift in Sources */,
@@ -825,6 +863,7 @@
 				A47F8A062A5121C400166AE7 /* APIClient+TargetType.swift in Sources */,
 				A4CC5FAD29EB8FE200C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8229FE1DAD007DFCEF /* Coordinator.swift in Sources */,
+				A47F8A162A6A8B7E00166AE7 /* CalendarTabViewModel.swift in Sources */,
 				A436DFA52A17B6CB007DFCEF /* SignInButton.swift in Sources */,
 				A47F89E72A45D28E00166AE7 /* MainTabbarCoordinator.swift in Sources */,
 				A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */,
@@ -880,12 +919,14 @@
 				A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
+				A47F8A132A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */,
 				A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,
 				A47F89E52A45C9BC00166AE7 /* MainTabbar.swift in Sources */,
 				E950E17D2A1F3D290037E0B2 /* UITextFieldExtension.swift in Sources */,
 				A436DFA92A184337007DFCEF /* UIColorExtension.swift in Sources */,
 				E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
+				A47F8A1C2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */,
 				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
 				E950E1652A1B5E060037E0B2 /* UIFontExtension.swift in Sources */,
 				A47F89FD2A464DDE00166AE7 /* BaseTaBarController.swift in Sources */,
@@ -893,6 +934,7 @@
 				A47F8A072A5121C400166AE7 /* APIClient+TargetType.swift in Sources */,
 				A4CC5FD829EB8FF800C0C9F6 /* ColorBookMarkV2.xcdatamodeld in Sources */,
 				A436DF8329FE1DAF007DFCEF /* Coordinator.swift in Sources */,
+				A47F8A172A6A8B7E00166AE7 /* CalendarTabViewModel.swift in Sources */,
 				A436DFA62A17B6CB007DFCEF /* SignInButton.swift in Sources */,
 				A47F89E82A45D28E00166AE7 /* MainTabbarCoordinator.swift in Sources */,
 				A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */,

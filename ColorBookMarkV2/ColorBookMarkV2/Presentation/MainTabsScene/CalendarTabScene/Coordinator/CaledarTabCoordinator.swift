@@ -18,6 +18,7 @@ final class CaledarTabCoordinator: CalendarTabCoordinatorDependencies {
     }
     
     func start() {
+//        self.caledarTabViewController.viewModel = CalendarTabViewModel(
         self.navigationController.pushViewController(caledarTabViewController, animated: true)
     }
 

@@ -14,6 +14,8 @@ final class MainTabbarCoordinator: MainTabbarCoordinatorDependencies {
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.setNavigationBarHidden(true, animated: true)
+        self.navigationController.isNavigationBarHidden = true
         self.tabBarController = BaseTaBarController()
     }
     
