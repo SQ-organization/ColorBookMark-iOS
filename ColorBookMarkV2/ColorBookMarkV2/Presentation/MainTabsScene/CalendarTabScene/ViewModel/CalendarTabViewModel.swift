@@ -24,8 +24,6 @@ final class CalendarTabViewModel {
     }
     
     struct Output {
-//        var
+        var selectedMonthText: PublishSubject<String>
     }
-    
-    
 }

@@ -11,6 +11,7 @@ import RxSwift
 
 final class CaledarTabViewController: UIViewController {
     private let disposeBag = DisposeBag()
+    var viewModel: CalendarTabViewModel?
 
     private var week: [String] = ["일", "월", "화", "수", "목", "금", "토"]
     private var daysCountInMonth = 0

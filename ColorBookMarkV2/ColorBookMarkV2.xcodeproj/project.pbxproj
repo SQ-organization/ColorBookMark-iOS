@@ -85,6 +85,8 @@
 		A47F8A172A6A8B7E00166AE7 /* CalendarTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A152A6A8B7D00166AE7 /* CalendarTabViewModel.swift */; };
 		A47F8A1B2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */; };
 		A47F8A1C2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */; };
+		A4C8DD552A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */; };
+		A4C8DD562A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
 		A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */; };
 		A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA629EB8FE200C0C9F6 /* ViewController.swift */; };
@@ -179,6 +181,7 @@
 		A47F8A112A5F5D7800166AE7 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		A47F8A152A6A8B7D00166AE7 /* CalendarTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabViewModel.swift; sourceTree = "<group>"; };
 		A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabUseCase.swift; sourceTree = "<group>"; };
+		A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCalendarTabUseCase.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CC5FA429EB8FE200C0C9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -506,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				A47F8A192A6A8C0200166AE7 /* Protocol */,
+				A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */,
 			);
 			path = CalendarTab;
 			sourceTree = "<group>";
@@ -879,6 +883,7 @@
 				A436DF8D2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
 				E9C4C0742A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift in Sources */,
 				A436DFB22A184E3B007DFCEF /* UIViewExtension.swift in Sources */,
+				A4C8DD552A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */,
 				A436DFB52A185AB9007DFCEF /* CustomTextField.swift in Sources */,
 				A47F89F32A45DFE700166AE7 /* CaledarTabViewController.swift in Sources */,
 				A4CC5FA529EB8FE200C0C9F6 /* SceneDelegate.swift in Sources */,
@@ -950,6 +955,7 @@
 				A436DF8E2A078423007DFCEF /* DefaultSignInUseCase.swift in Sources */,
 				E9C4C0752A2DC07900EB32AE /* SignUpWithPasswordViewModel.swift in Sources */,
 				A436DFB32A184E3B007DFCEF /* UIViewExtension.swift in Sources */,
+				A4C8DD562A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */,
 				A436DFB62A185AB9007DFCEF /* CustomTextField.swift in Sources */,
 				A47F89F42A45DFE700166AE7 /* CaledarTabViewController.swift in Sources */,
 				A4CC5FDA29EB8FF800C0C9F6 /* SceneDelegate.swift in Sources */,
