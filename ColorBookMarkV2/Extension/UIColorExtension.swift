@@ -28,4 +28,8 @@ extension UIColor {
     static let txt_component = UIColor(named: "txt_component")
     static let txt_disabled = UIColor(named: "txt_disabled")
     
+    static let gray_03 = UIColor(named: "gray-03")
+    static let gray_04 = UIColor(named: "gray-04")
+    
+    
 }
