@@ -124,8 +124,9 @@ extension CaledarTabViewController: UICollectionViewDataSource {
 extension CaledarTabViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth: CGFloat = UIScreen.main.bounds.size.width
-        let cellSize : CGFloat = (screenWidth - 48) / 9
-        return CGSize(width: cellSize, height: cellSize)
+        let cellWidth: CGFloat = (screenWidth - 48) / 9
+        let cellHeight: CGFloat = cellWidth * 58.0 / 40.0
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }
 
