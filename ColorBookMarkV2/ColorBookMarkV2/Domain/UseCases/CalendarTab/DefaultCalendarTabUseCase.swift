@@ -9,7 +9,6 @@ import Foundation
 import RxSwift
 
 final class DefaultCalendarTabUseCase: CalendarTabUseCase {
-    var selectedMonth: BehaviorSubject<Date> = BehaviorSubject(value: Date())
-    
+    var selectedMonth: BehaviorSubject<Date?> = BehaviorSubject(value: Date().startOfMonth)
     
 }

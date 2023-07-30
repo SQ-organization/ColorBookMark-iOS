@@ -25,15 +25,43 @@ final class CalendarTabViewModel {
     
     struct Output {
         var selectedMonthText = PublishSubject<String>()
+        var selectedMonthInfo = BehaviorSubject<[String]>(value: [])
     }
     
     func transform(from input: Input) -> Output {
         let output = Output()
         self.useCase.selectedMonth
-            .compactMap({ $0.toString(format: "yyyy.MM") })
+            .compactMap({ $0?.toString(format: "yyyy.MM") })
             .bind(to: output.selectedMonthText)
             .disposed(by: disposeBag)
         
+        self.useCase.selectedMonth
+            .compactMap { [weak self] selectedMonth in
+                self?.getSelectedMonth(month: selectedMonth)
+            }
+            .bind(to: output.selectedMonthInfo)
+            .disposed(by: disposeBag)
+        
         return output
+    }
+}
+
+
+extension CalendarTabViewModel {
+    // 해당 월 날짜 가져오기
+    func getSelectedMonth(month: Date?) -> [String] {
+        guard let month = month else { return [] }
+
+        let numOfDays = month.numberOfDaysInMonth
+        let weekdayAdding = 2 - month.weekday
+        var days: [String] = []
+        for day in weekdayAdding...numOfDays {
+            if day < 1 {
+                days.append("")
+            } else {
+                days.append(String(day))
+            }
+        }
+        return days
     }
 }

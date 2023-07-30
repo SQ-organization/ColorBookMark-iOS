@@ -35,4 +35,15 @@ extension Date {
         tmpDay = gregorian.date(byAdding: .month, value: 1, to: tmpDay!)
         return gregorian.date(byAdding: .day, value: -1, to: tmpDay!)!
     }
+    
+    // 달에 있는 일 수
+    var numberOfDaysInMonth: Int {
+        return Calendar.current.range(of: .day, in: .month, for: self)?.count ?? 0
+    }
+    
+    // 해당 월 시작 요일
+    var weekday: Int {
+        return Calendar.current.component(.weekday, from: self)
+    }
+    
 }

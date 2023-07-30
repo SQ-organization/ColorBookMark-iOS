@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol CalendarTabUseCase {
-    var selectedMonth: BehaviorSubject<Date> { get set }
+    var selectedMonth: BehaviorSubject<Date?> { get set }
 }

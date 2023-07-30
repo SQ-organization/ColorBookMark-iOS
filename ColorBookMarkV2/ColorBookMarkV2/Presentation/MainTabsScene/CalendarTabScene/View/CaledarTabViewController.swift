@@ -14,8 +14,7 @@ final class CaledarTabViewController: UIViewController {
     var viewModel: CalendarTabViewModel?
 
     private var week: [String] = ["일", "월", "화", "수", "목", "금", "토"]
-    private var daysCountInMonth = 0
-    private var weekdayAdding = 0
+    private var daysInSelectedMonth: [String] = []
     
     private let monthButton: UIButton = {
         let button = UIButton()
@@ -98,17 +97,24 @@ final class CaledarTabViewController: UIViewController {
                 self?.monthButton.setTitle(month, for: .normal)
             })
             .disposed(by: disposeBag)
+        
+        output?.selectedMonthInfo
+            .subscribe(onNext: {[weak self] days in
+                self?.daysInSelectedMonth = days
+                self?.collectionView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 extension CaledarTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return daysInSelectedMonth.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.identifier, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
-        cell.setupLayout(date: "15")
+        cell.setupLayout(date: daysInSelectedMonth[indexPath.item])
         return cell
     }
     
