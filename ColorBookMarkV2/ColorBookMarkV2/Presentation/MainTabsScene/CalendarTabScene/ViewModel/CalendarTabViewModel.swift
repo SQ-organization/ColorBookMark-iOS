@@ -19,11 +19,21 @@ final class CalendarTabViewModel {
     }
     
     struct Input {
-        var didTapCalendarCell: Observable<Void>
+        var didTapCalendarCell: Observable<Int>
         var changeMonth: Observable<Void>
     }
     
     struct Output {
-        var selectedMonthText: PublishSubject<String>
+        var selectedMonthText = PublishSubject<String>()
+    }
+    
+    func transform(from input: Input) -> Output {
+        let output = Output()
+        self.useCase.selectedMonth
+            .compactMap({ $0.toString(format: "yyyy.MM") })
+            .bind(to: output.selectedMonthText)
+            .disposed(by: disposeBag)
+        
+        return output
     }
 }

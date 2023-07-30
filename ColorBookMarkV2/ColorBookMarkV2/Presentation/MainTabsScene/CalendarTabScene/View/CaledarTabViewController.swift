@@ -51,6 +51,7 @@ final class CaledarTabViewController: UIViewController {
         self.navigationItem.titleView = monthButton
         setupLayout()
         configuration()
+        bindViewModel()
     }
     
 
@@ -85,6 +86,18 @@ final class CaledarTabViewController: UIViewController {
         collectionView.dataSource = self
         self.collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
         
+    }
+    
+    private func bindViewModel() {
+        let input = CalendarTabViewModel.Input(didTapCalendarCell: collectionView.rx.itemSelected.map({ $0.item }),
+                                               changeMonth: monthButton.rx.tap.asObservable())
+        let output = viewModel?.transform(from: input)
+        
+        output?.selectedMonthText
+            .subscribe(onNext: { [weak self] month in
+                self?.monthButton.setTitle(month, for: .normal)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
