@@ -24,7 +24,7 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        dateColorCircleView.layer.cornerRadius = (contentView.frame.width - 8.0) * 0.5
+        dateColorCircleView.layer.cornerRadius = (contentView.frame.width) * 0.5
         dateColorCircleView.layer.borderWidth = 1.0
         dateColorCircleView.layer.borderColor = UIColor.gray_04?.cgColor
         dateColorCircleView.layer.masksToBounds = true
@@ -58,7 +58,7 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
             .forEach({ contentView.addSubview($0) })
         
         dateColorCircleView.snp.makeConstraints({
-            $0.horizontalEdges.top.equalToSuperview().inset(4.0)
+            $0.horizontalEdges.top.equalToSuperview()
             $0.height.equalTo(dateColorCircleView.snp.width)
         })
         

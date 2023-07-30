@@ -32,7 +32,7 @@ final class CaledarTabViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 20.0
     
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         collectionView.isScrollEnabled = false
         collectionView.backgroundColor = .systemBackground
         return collectionView
@@ -81,8 +81,9 @@ final class CaledarTabViewController: UIViewController {
     }
     
     private func configuration() {
-        collectionView.delegate = self
+//        collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.collectionViewLayout = self.createCompositionalLayout()
         self.collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
         
     }
@@ -121,11 +122,26 @@ extension CaledarTabViewController: UICollectionViewDataSource {
   
 }
 
-extension CaledarTabViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenWidth: CGFloat = UIScreen.main.bounds.size.width
-        let cellWidth: CGFloat = (screenWidth - 48) / 9
-        let cellHeight: CGFloat = cellWidth * 58.0 / 40.0
-        return CGSize(width: cellWidth, height: cellHeight)
+extension CaledarTabViewController {
+    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+        let item = NSCollectionLayoutItem(
+            layoutSize: .init(
+                widthDimension: .fractionalWidth(1 / 7.0),
+                heightDimension: .fractionalHeight(1)
+            )
+        )
+        item.contentInsets = .init(top: 0.0, leading: 8.0, bottom: 0.0, trailing: 8.0)
+        
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: .init(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .estimated(58.0)
+            ),
+            subitems: [item]
+        )
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 16.0
+        return UICollectionViewCompositionalLayout(section: section)
     }
 }
