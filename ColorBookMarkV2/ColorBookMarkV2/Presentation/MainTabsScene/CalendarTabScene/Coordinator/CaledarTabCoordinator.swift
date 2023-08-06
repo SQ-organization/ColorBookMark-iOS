@@ -22,5 +22,10 @@ final class CaledarTabCoordinator: CalendarTabCoordinatorDependencies {
                                                                        calendarTabUseCase: DefaultCalendarTabUseCase())
         self.navigationController.pushViewController(caledarTabViewController, animated: true)
     }
+    
+    func presentMonthPickerViewController() {
+        let vc = MonthPickerViewController()
+        self.navigationController.present(vc, animated: true)
+    }
 
 }

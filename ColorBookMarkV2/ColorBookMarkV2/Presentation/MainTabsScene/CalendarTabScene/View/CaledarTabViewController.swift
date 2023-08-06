@@ -89,8 +89,7 @@ final class CaledarTabViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        let input = CalendarTabViewModel.Input(didTapCalendarCell: collectionView.rx.itemSelected.map({ $0.item }),
-                                               changeMonth: monthButton.rx.tap.asObservable())
+        let input = CalendarTabViewModel.Input(changeMonth: monthButton.rx.tap.asObservable(), didTapCalendarCell: collectionView.rx.itemSelected.map({ $0.item }), didTapMonthButton: monthButton.rx.tap.asObservable())
         let output = viewModel?.transform(from: input)
         
         output?.selectedMonthText

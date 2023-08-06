@@ -38,26 +38,19 @@ final class MonthPickerView: UIPickerView {
     }
     
     func commonSetup() {
-        // population years
-//        var year = Calendar(identifier: .gregorian).component(.year, from: Date())
-//        var years = Array(2021...2031)
         if years.count == 0 {
             var year = Calendar(identifier: .gregorian).component(.year, from: Date())
             for _ in 1...15 {
                 years.append(year)
-                year += 1
+                year -= 1
             }
         }
-//        self.years = years
         
-        // population months with localized names
-//        var months: [String] = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",]
         var month = 0
         for _ in 1...12 {
             months.append(DateFormatter().monthSymbols[month].capitalized)
             month += 1
         }
-//        self.months = months
         
         delegate = self
         dataSource = self

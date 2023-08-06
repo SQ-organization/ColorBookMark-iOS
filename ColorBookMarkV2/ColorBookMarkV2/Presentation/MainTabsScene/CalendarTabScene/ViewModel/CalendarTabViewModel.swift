@@ -19,8 +19,9 @@ final class CalendarTabViewModel {
     }
     
     struct Input {
-        var didTapCalendarCell: Observable<Int>
         var changeMonth: Observable<Void>
+        var didTapCalendarCell: Observable<Int>
+        var didTapMonthButton: Observable<Void>
     }
     
     struct Output {
@@ -30,6 +31,12 @@ final class CalendarTabViewModel {
     
     func transform(from input: Input) -> Output {
         let output = Output()
+        
+        input.didTapMonthButton
+            .subscribe(onNext: { [weak self] in
+                self?.coordinator.presentMonthPickerViewController()})
+            .disposed(by: disposeBag)
+        
         self.useCase.selectedMonth
             .compactMap({ $0?.toString(format: "yyyy.MM") })
             .bind(to: output.selectedMonthText)
