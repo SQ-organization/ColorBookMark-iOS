@@ -8,9 +8,8 @@
 import Foundation
 
 struct StringConstant {
-    static let signInWithKakao: String = "카카오로 로그인"
-    static let signInWithApple: String = "Apple로 로그인"
-    static let signInWithEmail: String = "이메일로 로그인"
+    static let chooseMonth: String = "월을 선택해주세요."
+    static let completeToSelect: String = "선택완료"
     
     static let letsStartColorBookMark: String = "색갈피를 시작해볼까요?"
     
@@ -28,6 +27,11 @@ struct StringConstant {
     static let settingTab: String = "설정"
     
     static let startSignUp: String = "회원가입"
+    
+    static let signInWithKakao: String = "카카오로 로그인"
+    static let signInWithApple: String = "Apple로 로그인"
+    static let signInWithEmail: String = "이메일로 로그인"
+    
     static let enterPassword: String = "비밀번호를 입력해주세요"
     static let greeting: String = "어서오세요! 반가워요!"
     static let passwordPlaceholder_1: String = "비밀번호를 입력해주세요"
