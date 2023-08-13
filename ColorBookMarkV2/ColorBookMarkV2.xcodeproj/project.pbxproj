@@ -47,6 +47,8 @@
 		A436DFB32A184E3B007DFCEF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */; };
 		A436DFB52A185AB9007DFCEF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB42A185AB9007DFCEF /* CustomTextField.swift */; };
 		A436DFB62A185AB9007DFCEF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB42A185AB9007DFCEF /* CustomTextField.swift */; };
+		A47EE25E2A8898530074C161 /* SelectMonthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */; };
+		A47EE25F2A8898530074C161 /* SelectMonthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */; };
 		A47F89C62A2C1D8A00166AE7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89C52A2C1D8A00166AE7 /* RxCocoa */; };
 		A47F89C82A2C1D8A00166AE7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89C72A2C1D8A00166AE7 /* RxRelay */; };
 		A47F89CA2A2C1D8A00166AE7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89C92A2C1D8A00166AE7 /* RxSwift */; };
@@ -169,6 +171,7 @@
 		A436DFA72A184337007DFCEF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A436DFB42A185AB9007DFCEF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthDelegate.swift; sourceTree = "<group>"; };
 		A47F89D42A39163000166AE7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		A47F89E02A45BEBD00166AE7 /* MainTabbarCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarCoordinatorDependencies.swift; sourceTree = "<group>"; };
 		A47F89E32A45C9BC00166AE7 /* MainTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbar.swift; sourceTree = "<group>"; };
@@ -259,6 +262,7 @@
 		A436DF6629F4CD9A007DFCEF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A47EE25B2A88981B0074C161 /* Common */,
 				A436DF6D29F4CF98007DFCEF /* Repositories */,
 				A436DF6C29F4CF7E007DFCEF /* UseCases */,
 				A436DF6B29F4CF59007DFCEF /* Entities */,
@@ -438,6 +442,22 @@
 				A436DFB42A185AB9007DFCEF /* CustomTextField.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		A47EE25B2A88981B0074C161 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A47EE25C2A8898280074C161 /* Delegate */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A47EE25C2A8898280074C161 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		A47F89D32A39162000166AE7 /* Components */ = {
@@ -866,6 +886,7 @@
 				A47F8A032A51214600166AE7 /* APIClient.swift in Sources */,
 				A436DF7A29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
+				A47EE25E2A8898530074C161 /* SelectMonthDelegate.swift in Sources */,
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A47F8A122A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */,
@@ -940,6 +961,7 @@
 				A47F8A042A51214600166AE7 /* APIClient.swift in Sources */,
 				A436DF7B29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
+				A47EE25F2A8898530074C161 /* SelectMonthDelegate.swift in Sources */,
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A47F8A132A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */,
