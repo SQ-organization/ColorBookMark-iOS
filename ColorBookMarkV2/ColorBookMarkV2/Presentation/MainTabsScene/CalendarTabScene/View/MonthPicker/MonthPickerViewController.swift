@@ -41,6 +41,16 @@ final class MonthPickerViewController: UIViewController {
         return view
     }()
     
+    private let complete: ((Date) -> Void)?
+    
+    init(complete: ((Date) -> Void)? = nil) {
+        self.complete = complete
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,10 +89,14 @@ final class MonthPickerViewController: UIViewController {
             $0.height.equalTo(24.0)
             $0.top.equalTo(monthPickerView.snp.bottom).offset(16.0)
         })
-
-        
-        
-        
-
+    }
+    
+    private func configuration() {
+        confirmButton.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
+    }
+    
+    @objc
+    private func didTapConfirmButton() {
+        complete?(Date())
     }
 }

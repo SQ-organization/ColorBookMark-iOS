@@ -25,7 +25,7 @@ final class MonthPickerView: UIPickerView {
         }
     }
     
-    var onDateSelected: ((_ month: Int, _ year: Int) -> Void)?
+    var onDateSelected: ((Date) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -78,7 +78,8 @@ extension MonthPickerView: UIPickerViewDelegate {
         let month = selectedRow(inComponent: 1) + 1
         let year = years[selectedRow(inComponent: 0)]
         if let block = onDateSelected {
-            block(month, year)
+            debugPrint("====\(month)")
+            debugPrint("====\(year)")
         }
         
         self.month = month
