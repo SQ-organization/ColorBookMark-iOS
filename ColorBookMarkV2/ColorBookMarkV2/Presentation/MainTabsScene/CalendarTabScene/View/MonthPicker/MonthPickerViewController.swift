@@ -42,10 +42,14 @@ final class MonthPickerViewController: UIViewController {
     }()
     
     private let complete: ((Date) -> Void)?
+    private var selectedDate: Date = Date()
+    private weak var delegate: SelectMonthDelegate?
     
-    init(complete: ((Date) -> Void)? = nil) {
+    init(complete: ((Date) -> Void)? = nil,
+         delegate: SelectMonthDelegate) {
         self.complete = complete
-        super.init()
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -55,6 +59,7 @@ final class MonthPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        configuration()
     }
     
     private func setupLayout() {
@@ -92,11 +97,21 @@ final class MonthPickerViewController: UIViewController {
     }
     
     private func configuration() {
+        monthPickerView.onDateSelected = { [weak self] date in
+            self?.selectedDate = date
+        }
         confirmButton.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
+        dismissButton.addTarget(self, action: #selector(didTapDismissButton), for: .touchUpInside)
     }
     
     @objc
     private func didTapConfirmButton() {
-        complete?(Date())
+        delegate?.selectMonth(month: selectedDate)
+        self.dismiss(animated: true)
+    }
+    
+    @objc
+    private func didTapDismissButton() {
+        self.dismiss(animated: true)
     }
 }

@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-protocol CalendarTabUseCase {
+protocol CalendarTabUseCase: SelectMonthDelegate {
     var selectedMonth: BehaviorSubject<Date?> { get set }
 }

@@ -34,7 +34,8 @@ final class CalendarTabViewModel {
         
         input.didTapMonthButton
             .subscribe(onNext: { [weak self] in
-                self?.coordinator.presentMonthPickerViewController()})
+                guard let self = self else { return }
+                self.coordinator.presentMonthPickerViewController(with: self.useCase)})
             .disposed(by: disposeBag)
         
         self.useCase.selectedMonth

@@ -11,4 +11,8 @@ import RxSwift
 final class DefaultCalendarTabUseCase: CalendarTabUseCase {
     var selectedMonth: BehaviorSubject<Date?> = BehaviorSubject(value: Date().startOfMonth)
     
+    func selectMonth(month: Date) {
+        selectedMonth.onNext(month.startOfMonth)
+    }
+    
 }

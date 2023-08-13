@@ -8,6 +8,17 @@
 import Foundation
 
 extension Date {
+    public init?(_ source: String, format: String, timeZone: String? = nil) {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.locale     = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone   = timeZone == nil ? nil : TimeZone(abbreviation: timeZone!.uppercased())
+        dateFormatter.dateFormat = format
+        if let date = dateFormatter.date(from: source) {
+            self.init(timeIntervalSince1970: date.timeIntervalSince1970)
+        } else {
+            return nil
+        }
+    }
     
     /// Date 타입을 이용해서 원하는 포맷의 string으로 반환하는 함수
     /// - Parameters:

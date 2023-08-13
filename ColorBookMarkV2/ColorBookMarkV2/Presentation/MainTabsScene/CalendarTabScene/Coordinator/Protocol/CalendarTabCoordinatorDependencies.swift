@@ -9,5 +9,5 @@ import Foundation
 
 protocol CalendarTabCoordinatorDependencies: Coordinator {
     func start()
-    func presentMonthPickerViewController()
+    func presentMonthPickerViewController(with useCase: CalendarTabUseCase)
 }

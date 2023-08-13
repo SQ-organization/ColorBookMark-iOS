@@ -102,6 +102,7 @@ final class CaledarTabViewController: UIViewController {
             .subscribe(onNext: {[weak self] days in
                 self?.daysInSelectedMonth = days
                 self?.collectionView.reloadData()
+                self?.collectionView.setCollectionViewLayout((self?.createCompositionalLayout())!, animated: true)
             })
             .disposed(by: disposeBag)
     }

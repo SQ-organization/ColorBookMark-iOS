@@ -34,7 +34,7 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
     
     func setupLayout(date: String) {
         if date.isEmpty == true {
-            return
+            setupLayoutAfterToday(date: "")
         } else if isBeforeToday(date: date) == true {
             setupLayoutBeforeToday(date: date)
         } else {

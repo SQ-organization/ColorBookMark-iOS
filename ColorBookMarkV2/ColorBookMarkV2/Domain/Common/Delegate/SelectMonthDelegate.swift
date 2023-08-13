@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol SelectMonthDelegate {
+protocol SelectMonthDelegate: AnyObject {
     func selectMonth(month: Date)
 }

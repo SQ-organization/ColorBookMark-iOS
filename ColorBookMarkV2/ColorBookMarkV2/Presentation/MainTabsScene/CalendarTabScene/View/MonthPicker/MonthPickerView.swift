@@ -80,6 +80,10 @@ extension MonthPickerView: UIPickerViewDelegate {
         if let block = onDateSelected {
             debugPrint("====\(month)")
             debugPrint("====\(year)")
+            let dateString = String(format: "%d%02d", year, month)
+            let date = Date(dateString, format: "yyyyMM")
+            block(date ?? Date())
+            
         }
         
         self.month = month
