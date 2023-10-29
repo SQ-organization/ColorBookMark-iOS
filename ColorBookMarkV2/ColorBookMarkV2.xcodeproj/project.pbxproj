@@ -91,6 +91,8 @@
 		A4BE4D852A7F3557005AF201 /* MonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE4D832A7F3557005AF201 /* MonthPickerView.swift */; };
 		A4BE4D872A7F3D66005AF201 /* MonthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE4D862A7F3D66005AF201 /* MonthPickerViewController.swift */; };
 		A4BE4D882A7F3D66005AF201 /* MonthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE4D862A7F3D66005AF201 /* MonthPickerViewController.swift */; };
+		A4C7C02F2AA42AFF003FC04A /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */; };
+		A4C7C0302AA42AFF003FC04A /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */; };
 		A4C8DD552A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */; };
 		A4C8DD562A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */; };
 		A4CC5FA329EB8FE200C0C9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */; };
@@ -190,6 +192,7 @@
 		A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabUseCase.swift; sourceTree = "<group>"; };
 		A4BE4D832A7F3557005AF201 /* MonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerView.swift; sourceTree = "<group>"; };
 		A4BE4D862A7F3D66005AF201 /* MonthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerViewController.swift; sourceTree = "<group>"; };
+		A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCalendarTabUseCase.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CC5FA229EB8FE200C0C9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -480,9 +483,9 @@
 		A47F89D82A45BABF00166AE7 /* CalendarTabScene */ = {
 			isa = PBXGroup;
 			children = (
-				A47F8A142A6A8B6200166AE7 /* ViewModel */,
-				A47F89F12A45DFDC00166AE7 /* View */,
 				A47F89E92A45DF1100166AE7 /* Coordinator */,
+				A47F89F12A45DFDC00166AE7 /* View */,
+				A47F8A142A6A8B6200166AE7 /* ViewModel */,
 			);
 			path = CalendarTabScene;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 		A47F89F12A45DFDC00166AE7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A49D050A2A9A0EC600274C8D /* AddRecord */,
 				A4BE4D822A7F353E005AF201 /* MonthPicker */,
 				A47F89F22A45DFE700166AE7 /* CaledarTabViewController.swift */,
 				A47F8A112A5F5D7800166AE7 /* CalendarCollectionViewCell.swift */,
@@ -547,6 +551,14 @@
 				A47F8A1A2A6A8C2F00166AE7 /* CalendarTabUseCase.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A49D050A2A9A0EC600274C8D /* AddRecord */ = {
+			isa = PBXGroup;
+			children = (
+				A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */,
+			);
+			path = AddRecord;
 			sourceTree = "<group>";
 		};
 		A4BE4D822A7F353E005AF201 /* MonthPicker */ = {
@@ -895,6 +907,7 @@
 				A47F89E42A45C9BC00166AE7 /* MainTabbar.swift in Sources */,
 				E950E17C2A1F3A3A0037E0B2 /* UITextFieldExtension.swift in Sources */,
 				A436DFA82A184337007DFCEF /* UIColorExtension.swift in Sources */,
+				A4C7C02F2AA42AFF003FC04A /* AddRecordView.swift in Sources */,
 				E950E1562A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A47F8A1B2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */,
 				A436DF952A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
@@ -970,6 +983,7 @@
 				A47F89E52A45C9BC00166AE7 /* MainTabbar.swift in Sources */,
 				E950E17D2A1F3D290037E0B2 /* UITextFieldExtension.swift in Sources */,
 				A436DFA92A184337007DFCEF /* UIColorExtension.swift in Sources */,
+				A4C7C0302AA42AFF003FC04A /* AddRecordView.swift in Sources */,
 				E950E1572A1B382C0037E0B2 /* SignInWithEmailViewModel.swift in Sources */,
 				A47F8A1C2A6A8C2F00166AE7 /* CalendarTabUseCase.swift in Sources */,
 				A436DF962A0786B1007DFCEF /* DefaultSignInRepository.swift in Sources */,
@@ -1285,7 +1299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZY7J8GW45P;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ColorBookMarkV2/Resourse/Info-debug.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1312,7 +1326,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZY7J8GW45P;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ColorBookMarkV2/Resourse/Info-debug.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
