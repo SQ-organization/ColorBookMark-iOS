@@ -27,5 +27,11 @@ final class CaledarTabCoordinator: CalendarTabCoordinatorDependencies {
         let vc = MonthPickerViewController(delegate: useCase)
         self.navigationController.present(vc, animated: true)
     }
+    
+    func pushAddRecordViewController() {
+        let vc = AddRecordView()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController.pushViewController(vc, animated: true)
+    }
 
 }

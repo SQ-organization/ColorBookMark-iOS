@@ -1,14 +1,14 @@
 //
-//  ColorBookMarkV2Tests.swift
+//  AddViewModelTest.swift
 //  ColorBookMarkV2Tests
 //
-//  Created by SUN on 2023/04/16.
+//  Created by SUN on 10/29/23.
 //
 
 import XCTest
-@testable import ColorBookMarkV2
+@testable import Release
 
-final class ColorBookMarkV2Tests: XCTestCase {
+final class AddViewModelTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

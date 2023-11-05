@@ -32,6 +32,10 @@ final class AddRecordView: UIViewController {
 }
 
 extension AddRecordView {
+    private func setupNavigationBar() {
+        
+    }
+    
     private func setupLayout() {
         self.view.addSubview(scrollView)
         
@@ -58,5 +62,6 @@ extension AddRecordView {
 }
 
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-#Preview(traits: .portrait, body: {    AddRecordView()
+#Preview(traits: .portrait, body: {    
+    UINavigationController(rootViewController: AddRecordView())
 })

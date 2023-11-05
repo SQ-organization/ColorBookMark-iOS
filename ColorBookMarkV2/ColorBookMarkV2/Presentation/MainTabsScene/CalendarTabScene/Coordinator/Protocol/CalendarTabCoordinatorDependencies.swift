@@ -10,4 +10,5 @@ import Foundation
 protocol CalendarTabCoordinatorDependencies: Coordinator {
     func start()
     func presentMonthPickerViewController(with useCase: CalendarTabUseCase)
+    func pushAddRecordViewController()
 }
