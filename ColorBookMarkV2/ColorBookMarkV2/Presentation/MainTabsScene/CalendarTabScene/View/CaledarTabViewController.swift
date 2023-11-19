@@ -45,6 +45,8 @@ final class CaledarTabViewController: UIViewController {
         return stackView
     }()
     
+    private let addRecordButtonView = AddRecordButtonView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.titleView = monthButton
@@ -57,7 +59,8 @@ final class CaledarTabViewController: UIViewController {
     private func setupLayout() {
         self.view.backgroundColor = .systemBackground
         [weekColumnStackView,
-         collectionView]
+         collectionView,
+         addRecordButtonView]
             .forEach({ view.addSubview($0) })
         
         week.forEach({
@@ -77,6 +80,10 @@ final class CaledarTabViewController: UIViewController {
         collectionView.snp.makeConstraints({
             $0.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide).inset(24.0)
             $0.top.equalTo(weekColumnStackView.snp.bottom).offset(32.0)
+        })
+        
+        addRecordButtonView.snp.makeConstraints({
+            $0.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide).inset(16.0)
         })
     }
     
@@ -145,3 +152,8 @@ extension CaledarTabViewController {
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
+
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
+#Preview(traits: .portrait, body: {
+    CaledarTabViewController()
+})

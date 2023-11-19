@@ -47,6 +47,8 @@
 		A436DFB32A184E3B007DFCEF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */; };
 		A436DFB52A185AB9007DFCEF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB42A185AB9007DFCEF /* CustomTextField.swift */; };
 		A436DFB62A185AB9007DFCEF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436DFB42A185AB9007DFCEF /* CustomTextField.swift */; };
+		A47953DD2AF74CB700733678 /* AddRecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47953DC2AF74CB700733678 /* AddRecordButtonView.swift */; };
+		A47953DE2AF74CB700733678 /* AddRecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47953DC2AF74CB700733678 /* AddRecordButtonView.swift */; };
 		A47EE25E2A8898530074C161 /* SelectMonthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */; };
 		A47EE25F2A8898530074C161 /* SelectMonthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */; };
 		A47F89C62A2C1D8A00166AE7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A47F89C52A2C1D8A00166AE7 /* RxCocoa */; };
@@ -175,6 +177,7 @@
 		A436DFA72A184337007DFCEF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A436DFB12A184E3B007DFCEF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A436DFB42A185AB9007DFCEF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A47953DC2AF74CB700733678 /* AddRecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordButtonView.swift; sourceTree = "<group>"; };
 		A47EE25D2A8898530074C161 /* SelectMonthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthDelegate.swift; sourceTree = "<group>"; };
 		A47F89D42A39163000166AE7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		A47F89E02A45BEBD00166AE7 /* MainTabbarCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarCoordinatorDependencies.swift; sourceTree = "<group>"; };
@@ -479,6 +482,7 @@
 			children = (
 				A47F89D42A39163000166AE7 /* PopupViewController.swift */,
 				A47F89FB2A464DDE00166AE7 /* BaseTaBarController.swift */,
+				A47953DC2AF74CB700733678 /* AddRecordButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -923,6 +927,7 @@
 				A436DF6129F4C2F5007DFCEF /* StringConstant.swift in Sources */,
 				A47F89F92A45E51D00166AE7 /* UITabBarExtension.swift in Sources */,
 				E9C4C0712A2DC03800EB32AE /* SignUpWithPasswordViewController.swift in Sources */,
+				A47953DD2AF74CB700733678 /* AddRecordButtonView.swift in Sources */,
 				A47F8A032A51214600166AE7 /* APIClient.swift in Sources */,
 				A436DF7A29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF992A1080D1007DFCEF /* AppCoordinator.swift in Sources */,
@@ -1000,6 +1005,7 @@
 				A436DF6229F4C2F5007DFCEF /* StringConstant.swift in Sources */,
 				A47F89FA2A45E51D00166AE7 /* UITabBarExtension.swift in Sources */,
 				E9C4C0722A2DC03800EB32AE /* SignUpWithPasswordViewController.swift in Sources */,
+				A47953DE2AF74CB700733678 /* AddRecordButtonView.swift in Sources */,
 				A47F8A042A51214600166AE7 /* APIClient.swift in Sources */,
 				A436DF7B29F508D4007DFCEF /* SignInUseCase.swift in Sources */,
 				A436DF9A2A1080D1007DFCEF /* AppCoordinator.swift in Sources */,

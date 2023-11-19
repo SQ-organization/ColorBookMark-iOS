@@ -8,9 +8,17 @@
 import Foundation
 
 struct StringConstant {
+    // MARK: A
+    // MARK: B
+    // MARK: C
     static let chooseMonth: String = "월을 선택해주세요."
     static let completeToSelect: String = "선택완료"
     
+    // MARK: G
+    static let goingToAddRecord: String = "감정기록 하러가기"
+    
+    // MARK: L
+    static let letsRecordEmotionWithColor: String = "그날의 감정을 색으로 기록해봐요!"
     static let letsStartColorBookMark: String = "색갈피를 시작해볼까요?"
     
     static let startColorBookMark: String = "색갈피 시작하기"
