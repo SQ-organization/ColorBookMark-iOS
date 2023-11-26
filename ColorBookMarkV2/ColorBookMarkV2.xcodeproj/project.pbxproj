@@ -272,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				A47EE25B2A88981B0074C161 /* Common */,
-				A436DF6D29F4CF98007DFCEF /* Repositories */,
+				A436DF6D29F4CF98007DFCEF /* RepositoryProtocol */,
 				A436DF6C29F4CF7E007DFCEF /* UseCases */,
 				A436DF6B29F4CF59007DFCEF /* Entities */,
 			);
@@ -282,7 +282,7 @@
 		A436DF6729F4CDBA007DFCEF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A47953DB2AF7368700733678 /* New Group */,
+				A47953DB2AF7368700733678 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -335,12 +335,12 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		A436DF6D29F4CF98007DFCEF /* Repositories */ = {
+		A436DF6D29F4CF98007DFCEF /* RepositoryProtocol */ = {
 			isa = PBXGroup;
 			children = (
 				A436DF8F2A0785F7007DFCEF /* SignIn */,
 			);
-			path = Repositories;
+			path = RepositoryProtocol;
 			sourceTree = "<group>";
 		};
 		A436DF7129F4DE3A007DFCEF /* View */ = {
@@ -422,18 +422,9 @@
 		A436DF8F2A0785F7007DFCEF /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				A436DF902A078604007DFCEF /* Protocol */,
-				A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		A436DF902A078604007DFCEF /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
 				A436DF912A07861E007DFCEF /* SignInRepository.swift */,
 			);
-			path = Protocol;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		A436DF972A078755007DFCEF /* SignIn */ = {
@@ -454,11 +445,12 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		A47953DB2AF7368700733678 /* New Group */ = {
+		A47953DB2AF7368700733678 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A4C7705F2B12DFDF00C933A0 /* SignIn */,
 			);
-			path = "New Group";
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		A47EE25B2A88981B0074C161 /* Common */ = {
@@ -600,6 +592,14 @@
 				A4BE4D862A7F3D66005AF201 /* MonthPickerViewController.swift */,
 			);
 			path = MonthPicker;
+			sourceTree = "<group>";
+		};
+		A4C7705F2B12DFDF00C933A0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A436DF942A0786B1007DFCEF /* DefaultSignInRepository.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		A4CC5F9629EB8FE200C0C9F6 = {
