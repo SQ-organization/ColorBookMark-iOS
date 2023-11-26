@@ -74,9 +74,9 @@ final class MainTabbarCoordinator: MainTabbarCoordinatorDependencies {
             self.childCoordinators = [calendarCoordinator]
             calendarCoordinator.start()
         case .setting:
-            let calendarCoordinator = CaledarTabCoordinator(navigationController)
-            self.childCoordinators = [calendarCoordinator]
-            calendarCoordinator.start()
+            let settingCoordinator = SettingTabCoordinator(navigationController)
+            self.childCoordinators = [settingCoordinator]
+            settingCoordinator.start()
         }
     }
     
