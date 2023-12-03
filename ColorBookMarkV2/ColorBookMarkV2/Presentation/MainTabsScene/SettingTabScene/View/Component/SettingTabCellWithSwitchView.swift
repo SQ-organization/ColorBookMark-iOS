@@ -60,7 +60,8 @@ final class SettingTabCellWithSwitchView: UIView {
     }
     
     private func configuration() {
-        titleLabel.text = title
+        titleLabel.text = String(format: isOn == true ? "%@ ON" : "%@ OFF", title)
+        
         subTitleLabel.text = subTitle
         
         switchButton.isOn = isOn
@@ -105,18 +106,17 @@ final class SettingTabCellWithSwitchView: UIView {
     /// switch button 값 토글
     @objc
     private func didTappedSwitchButton() {
-        if switchButton.isOn == true {
-            switchButton.setOn(true, animated: true)
-        } else {
-            switchButton.setOn(false, animated: true)
-        }
+        switchButton.setOn(switchButton.isOn, animated: true)
+
+        titleLabel.text = String(format: switchButton.isOn == true ? "%@ ON" : "%@ OFF", title)
+        
         toggleSwitchButton?(switchButton.isOn)
     }
 }
 
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 #Preview(traits: .portrait, body: {
-    SettingTabCellWithSwitchView(title: "ggdafdfsdafsfwefewfewfewfewfewfwefwefe", subTitle: "Gg", isOn: false, toggleSwitchButton: nil)
+    SettingTabCellWithSwitchView(title: "ggdafdfsdafs", subTitle: "Gg", isOn: false, toggleSwitchButton: nil)
 })
 
 
