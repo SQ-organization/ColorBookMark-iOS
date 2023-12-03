@@ -49,4 +49,5 @@ struct StringConstant {
     static let passwordVerifyDone: String = "비밀번호가 일치합니다."
 
     static let whatIsTodayColor: String = "오늘의 감정의 색은\n무엇인가요?"
+    static let setting: String = "설정"
 }
