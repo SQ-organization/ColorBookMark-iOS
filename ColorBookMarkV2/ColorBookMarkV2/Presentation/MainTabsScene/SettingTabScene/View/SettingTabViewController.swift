@@ -20,7 +20,7 @@ final class SettingTabViewController: UIViewController {
     
     private let contentView: UIView = UIView()
     
-    private let cellView = SettingTabCellView(title: "ggddiofjiwejfoiewjiofjoiajfojewoifjweoifjoiawejfiojweifjoiaewjfoiawejfaioewj", subTitle: "Gg", isOn: false)
+    private let cellView = SettingTabCellWithSwitchView(title: "ggddiofjiwejfoiewjiofjoiajfojewoifjweoifjoiawejfiojweifjoiaewjfoiawejfaioewj", subTitle: "Gg", isOn: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()

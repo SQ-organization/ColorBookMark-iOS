@@ -102,8 +102,8 @@
 		A4C7706B2B12E9A900C933A0 /* SettingTabCoordinatorDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770692B12E9A900C933A0 /* SettingTabCoordinatorDependencies.swift */; };
 		A4C7706D2B12E9BE00C933A0 /* SettingTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7706C2B12E9BE00C933A0 /* SettingTabCoordinator.swift */; };
 		A4C7706E2B12E9BE00C933A0 /* SettingTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7706C2B12E9BE00C933A0 /* SettingTabCoordinator.swift */; };
-		A4C770712B12F62E00C933A0 /* SettingTabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770702B12F62E00C933A0 /* SettingTabCellView.swift */; };
-		A4C770722B12F62E00C933A0 /* SettingTabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770702B12F62E00C933A0 /* SettingTabCellView.swift */; };
+		A4C770712B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */; };
+		A4C770722B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */; };
 		A4C7C02F2AA42AFF003FC04A /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */; };
 		A4C7C0302AA42AFF003FC04A /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */; };
 		A4C8DD552A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */; };
@@ -210,7 +210,7 @@
 		A4C770652B12E8BD00C933A0 /* SettingTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabViewController.swift; sourceTree = "<group>"; };
 		A4C770692B12E9A900C933A0 /* SettingTabCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCoordinatorDependencies.swift; sourceTree = "<group>"; };
 		A4C7706C2B12E9BE00C933A0 /* SettingTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCoordinator.swift; sourceTree = "<group>"; };
-		A4C770702B12F62E00C933A0 /* SettingTabCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCellView.swift; sourceTree = "<group>"; };
+		A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCellWithSwitchView.swift; sourceTree = "<group>"; };
 		A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCalendarTabUseCase.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -661,7 +661,7 @@
 		A4C7706F2B12F61500C933A0 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A4C770702B12F62E00C933A0 /* SettingTabCellView.swift */,
+				A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1000,7 +1000,7 @@
 				A436DF7429F4DE5F007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6429F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A47F8A122A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */,
-				A4C770712B12F62E00C933A0 /* SettingTabCellView.swift in Sources */,
+				A4C770712B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift in Sources */,
 				A4C7706A2B12E9A900C933A0 /* SettingTabCoordinatorDependencies.swift in Sources */,
 				A436DF9C2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FA729EB8FE200C0C9F6 /* ViewController.swift in Sources */,
@@ -1082,7 +1082,7 @@
 				A436DF7529F4DE60007DFCEF /* SignInViewModel.swift in Sources */,
 				A436DF6529F4C39D007DFCEF /* DateExtension.swift in Sources */,
 				A47F8A132A5F5D7800166AE7 /* CalendarCollectionViewCell.swift in Sources */,
-				A4C770722B12F62E00C933A0 /* SettingTabCellView.swift in Sources */,
+				A4C770722B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift in Sources */,
 				A4C7706B2B12E9A900C933A0 /* SettingTabCoordinatorDependencies.swift in Sources */,
 				A436DF9D2A108D15007DFCEF /* UIButtonExtension.swift in Sources */,
 				A4CC5FD729EB8FF800C0C9F6 /* ViewController.swift in Sources */,

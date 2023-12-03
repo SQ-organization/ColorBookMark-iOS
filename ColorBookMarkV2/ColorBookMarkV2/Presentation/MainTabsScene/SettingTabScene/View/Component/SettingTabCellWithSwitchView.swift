@@ -1,5 +1,5 @@
 //
-//  SettingTabCellView.swift
+//  SettingTabCellWithSwitchView.swift
 //  ColorBookMarkV2
 //
 //  Created by SUN on 11/26/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class SettingTabCellView: UIView {
+final class SettingTabCellWithSwitchView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .txt_primary
@@ -116,7 +116,7 @@ final class SettingTabCellView: UIView {
 
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 #Preview(traits: .portrait, body: {
-    SettingTabCellView(title: "ggdafdfsdafsfwefewfewfewfewfewfwefwefe", subTitle: "Gg", isOn: false, toggleSwitchButton: nil)
+    SettingTabCellWithSwitchView(title: "ggdafdfsdafsfwefewfewfewfewfewfwefwefe", subTitle: "Gg", isOn: false, toggleSwitchButton: nil)
 })
 
 
