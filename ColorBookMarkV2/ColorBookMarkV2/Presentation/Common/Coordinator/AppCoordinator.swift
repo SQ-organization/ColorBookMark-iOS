@@ -12,7 +12,7 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     // 테스트용 플래그.
-    private var isSignUp: Bool = false
+    private var isSignUp: Bool = true
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController

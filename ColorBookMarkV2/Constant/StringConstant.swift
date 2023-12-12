@@ -8,10 +8,17 @@
 import Foundation
 
 struct StringConstant {
-    static let signInWithKakao: String = "카카오로 로그인"
-    static let signInWithApple: String = "Apple로 로그인"
-    static let signInWithEmail: String = "이메일로 로그인"
+    // MARK: A
+    // MARK: B
+    // MARK: C
+    static let chooseMonth: String = "월을 선택해주세요."
+    static let completeToSelect: String = "선택완료"
     
+    // MARK: G
+    static let goingToAddRecord: String = "감정기록 하러가기"
+    
+    // MARK: L
+    static let letsRecordEmotionWithColor: String = "그날의 감정을 색으로 기록해봐요!"
     static let letsStartColorBookMark: String = "색갈피를 시작해볼까요?"
     
     static let startColorBookMark: String = "색갈피 시작하기"
@@ -28,6 +35,11 @@ struct StringConstant {
     static let settingTab: String = "설정"
     
     static let startSignUp: String = "회원가입"
+    
+    static let signInWithKakao: String = "카카오로 로그인"
+    static let signInWithApple: String = "Apple로 로그인"
+    static let signInWithEmail: String = "이메일로 로그인"
+    
     static let enterPassword: String = "비밀번호를 입력해주세요"
     static let greeting: String = "어서오세요! 반가워요!"
     static let passwordPlaceholder_1: String = "비밀번호를 입력해주세요"
@@ -40,4 +52,8 @@ struct StringConstant {
     static let final: String = "이제 마지막!"
     static let usernamePlaceholder: String = "여섯 글자 이하로 입력해주세요."
     static let usernameNotice: String = "가입 시 개인정보처리방침 및 서비스이용약관에 동의하게 됩니다"
+
+    static let whatIsTodayColor: String = "오늘의 감정의 색은\n무엇인가요?"
+    static let setting: String = "설정"
+
 }

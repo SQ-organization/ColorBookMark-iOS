@@ -24,5 +24,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>baseURL</key>
+	<string></string>
 </dict>
 </plist>

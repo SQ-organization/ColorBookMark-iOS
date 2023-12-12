@@ -23,7 +23,7 @@ final class SignInViewController: UIViewController {
     private var welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = StringConstant.letsStartColorBookMark
-        label.textColor = .light_B02_Text
+        label.textColor = .txt_primary
         label.textAlignment = .center
         return label
     }()

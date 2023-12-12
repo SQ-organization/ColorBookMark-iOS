@@ -14,6 +14,8 @@ final class MainTabbarCoordinator: MainTabbarCoordinatorDependencies {
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.setNavigationBarHidden(true, animated: true)
+        self.navigationController.isNavigationBarHidden = true
         self.tabBarController = BaseTaBarController()
     }
     
@@ -72,9 +74,9 @@ final class MainTabbarCoordinator: MainTabbarCoordinatorDependencies {
             self.childCoordinators = [calendarCoordinator]
             calendarCoordinator.start()
         case .setting:
-            let calendarCoordinator = CaledarTabCoordinator(navigationController)
-            self.childCoordinators = [calendarCoordinator]
-            calendarCoordinator.start()
+            let settingCoordinator = SettingTabCoordinator(navigationController)
+            self.childCoordinators = [settingCoordinator]
+            settingCoordinator.start()
         }
     }
     
