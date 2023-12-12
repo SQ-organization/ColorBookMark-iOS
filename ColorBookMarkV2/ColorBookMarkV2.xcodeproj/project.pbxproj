@@ -106,6 +106,8 @@
 		A4C770722B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */; };
 		A4C770742B1C36C100C933A0 /* SettingTabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770732B1C36C100C933A0 /* SettingTabCellView.swift */; };
 		A4C770752B1C36C100C933A0 /* SettingTabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770732B1C36C100C933A0 /* SettingTabCellView.swift */; };
+		A4C770772B1C3D4200C933A0 /* UserNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770762B1C3D4200C933A0 /* UserNameCellView.swift */; };
+		A4C770782B1C3D4200C933A0 /* UserNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C770762B1C3D4200C933A0 /* UserNameCellView.swift */; };
 		A4C7C02F2AA42AFF003FC04A /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */; };
 		A4C7C0302AA42AFF003FC04A /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */; };
 		A4C8DD552A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */; };
@@ -214,6 +216,7 @@
 		A4C7706C2B12E9BE00C933A0 /* SettingTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCoordinator.swift; sourceTree = "<group>"; };
 		A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCellWithSwitchView.swift; sourceTree = "<group>"; };
 		A4C770732B1C36C100C933A0 /* SettingTabCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabCellView.swift; sourceTree = "<group>"; };
+		A4C770762B1C3D4200C933A0 /* UserNameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCellView.swift; sourceTree = "<group>"; };
 		A4C7C02E2AA42AFF003FC04A /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		A4C8DD542A6B9C9D000F4D62 /* DefaultCalendarTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCalendarTabUseCase.swift; sourceTree = "<group>"; };
 		A4CC5F9F29EB8FE200C0C9F6 /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -666,6 +669,7 @@
 			children = (
 				A4C770702B12F62E00C933A0 /* SettingTabCellWithSwitchView.swift */,
 				A4C770732B1C36C100C933A0 /* SettingTabCellView.swift */,
+				A4C770762B1C3D4200C933A0 /* UserNameCellView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1028,6 +1032,7 @@
 				A436DF7729F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A47F89EF2A45DF7E00166AE7 /* CaledarTabCoordinator.swift in Sources */,
 				A436DF892A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
+				A4C770772B1C3D4200C933A0 /* UserNameCellView.swift in Sources */,
 				A4BE4D872A7F3D66005AF201 /* MonthPickerViewController.swift in Sources */,
 				A4BE4D842A7F3557005AF201 /* MonthPickerView.swift in Sources */,
 				A47F8A092A51220900166AE7 /* APIConstant.swift in Sources */,
@@ -1111,6 +1116,7 @@
 				A436DF7829F4E81D007DFCEF /* SignInViewController.swift in Sources */,
 				A47F89F02A45DF7E00166AE7 /* CaledarTabCoordinator.swift in Sources */,
 				A436DF8A2A07802B007DFCEF /* SignInCoordinator.swift in Sources */,
+				A4C770782B1C3D4200C933A0 /* UserNameCellView.swift in Sources */,
 				A4BE4D882A7F3D66005AF201 /* MonthPickerViewController.swift in Sources */,
 				A4BE4D852A7F3557005AF201 /* MonthPickerView.swift in Sources */,
 				A47F8A0A2A51220900166AE7 /* APIConstant.swift in Sources */,
