@@ -12,6 +12,7 @@ final class UserNameCellView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .txt_primary
+        label.font = .Pretendard(.bold, size: 28.0)
         return label
     }()
     
@@ -19,13 +20,22 @@ final class UserNameCellView: UIView {
         let label = UILabel()
         label.textColor = .txt_primary
         label.text = "내정보"
+        label.font = .Pretendard(.medium, size: 14.0)
         return label
     }()
     
-    private let rightArrowImageView: some View {
-        let image = UIImage(named: "")
-        let 
-    }
+    private let rightArrowImageView: UIImageView = {
+        let image = UIImage(named: "arrow_right_black_24")
+        let imageView = UIImageView(image: image)
+        
+        return imageView
+    }()
+    
+    private let dividerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .component_primary
+        return view
+    }()
     
     private let title: String
     
@@ -48,22 +58,44 @@ final class UserNameCellView: UIView {
     }
     
     private func setupLayout() {
-        self.backgroundColor = .background_elevated
-        self.layer.cornerRadius = 8.0
         
-        [titleLabel]
+        [titleLabel,
+         myInformationLabel,
+        rightArrowImageView,
+         dividerView]
             .forEach({ addSubview($0) })
         
+        myInformationLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        myInformationLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
+        rightArrowImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
         titleLabel.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(16.0)
+            $0.leading.top.equalToSuperview().inset(4.0)
+
         }
-        titleLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+       
+        myInformationLabel.snp.makeConstraints({
+            $0.centerY.equalTo(titleLabel)
+            $0.leading.equalTo(titleLabel.snp.trailing) .offset(8.0)
+
+        })
+        
+        rightArrowImageView.snp.makeConstraints({
+            $0.leading.equalTo(myInformationLabel.snp.trailing)
+            $0.centerY.equalTo(myInformationLabel)
+            $0.trailing.equalToSuperview().inset(4.0)
+        })
+        
+        dividerView.snp.makeConstraints({
+            $0.horizontalEdges.bottom.equalToSuperview()
+            $0.top.equalTo(titleLabel.snp.bottom).offset(12.0)
+            $0.height.equalTo(2.0)
+        })
         
     }
 }
 
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 #Preview(traits: .portrait, body: {
-    UserNameCellView(title: "ggdafdfsdafsfwefewfewfewfewfewfwefwefedfdf")
+    UserNameCellView(title: "ggdafdfsefedfdf")
 })

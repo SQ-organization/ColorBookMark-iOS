@@ -27,6 +27,9 @@ final class SettingTabViewController: UIViewController {
         return stackView
     }()
     
+    private let myInformationSectionView: UserNameCellView
+     = UserNameCellView(title: "내이름")
+    
     private let alertSettingCellView: SettingTabCellWithSwitchView = SettingTabCellWithSwitchView(title: "ggddiofjiwejfoiewjiofjoiajfojewoifjweoifjoiawejfiojweifjoiaewjfoiawejfaioewj", subTitle: "Gg", isOn: false)
     
     private let darkModeSettingCellView: SettingTabCellWithSwitchView = SettingTabCellWithSwitchView(title: "ggddiofjiwejfoiewjiofjoiajfojewoifjweoifjoiawejfiojweifjoiaewjfoiawejfaioewj", subTitle: "Gg", isOn: false)
@@ -66,12 +69,17 @@ final class SettingTabViewController: UIViewController {
             $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
         })
-        
+        contentView.addSubview(myInformationSectionView)
         contentView.addSubview(verticalStackView)
         
-        verticalStackView.snp.makeConstraints({
-            $0.top.equalToSuperview()
+        myInformationSectionView.snp.makeConstraints({
+            $0.top.horizontalEdges.equalToSuperview()
                 .inset(16.0)
+        })
+        
+        verticalStackView.snp.makeConstraints({
+            $0.top.equalTo(myInformationSectionView.snp.bottom)
+                .offset(32.0)
             $0.horizontalEdges.equalToSuperview().inset(16.0)
         })
     }
